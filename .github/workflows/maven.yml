@@ -15,7 +15,7 @@ jobs:
     runs-on: ${{matrix.os}}
     strategy:
       matrix:
-        jvm: [8, 9, 10, 11, 12, 13, 14]
+        jvm: [8, 11]
         os: [ubuntu-latest, windows-latest, macOS-latest]
 
     steps:
