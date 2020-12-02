@@ -28,5 +28,5 @@ Following items are covered in their respected links. Please use the link provid
 
 ### Variables
 * This section covers variables, and casting of variable types to each other with examples in java. 
-  * Source code can be found in [here](https://github.com/Umit-Soylu/Java-Training/tree/HelloWorld).
+  * Source code can be found in [here](https://github.com/Umit-Soylu/Mastering-Java-For-Beginners/tree/Variables).
   * Issues tackled: `variable`, `parameter`, `field`, `local variable`, `casting`.
