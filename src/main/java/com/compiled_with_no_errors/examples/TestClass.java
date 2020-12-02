@@ -21,25 +21,25 @@ public class TestClass {
         // Test negative values
         x = -2;
         y = -3;
-        result = operations.addition(x,y);
+        result = operations.addition(x, y);
         System.out.println("result of " + x + " + " + y + " = " + result);
 
         // Test edge cases
         x = Integer.MAX_VALUE;
         y = -3;
-        result = operations.addition(x,y);
+        result = operations.addition(x, y);
         System.out.println("result of " + x + " + " + y + " = " + result);
 
         // Test edge cases
         x = Integer.MIN_VALUE;
         y = -3;
-        result = operations.addition(x,y);
+        result = operations.addition(x, y);
         System.out.println("result of " + x + " + " + y + " = " + result);
 
         // Test edge cases
         x = Integer.MAX_VALUE;
         y = Integer.MAX_VALUE;
-        result = operations.addition(x,y);
+        result = operations.addition(x, y);
         System.out.println("result of " + x + " + " + y + " = " + result);
 
     }
