@@ -27,6 +27,6 @@ Here is the lsit of tools that is used in conjuction with this repository
 Following items are covered in their respected links. Please use the link provided to access given course materials.
 
 ### Variables
-* This section covers variables, and casting of variable types to each other with examples in java. 
+* This section covers variables and casting of variable types to each other with examples in java. 
   * Source code can be found in [here](https://github.com/Umit-Soylu/Mastering-Java-For-Beginners/tree/Variables).
   * Issues tackled: `variable`, `parameter`, `field`, `local variable`, `casting`.
