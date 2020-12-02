@@ -30,3 +30,6 @@ Following items are covered in their respected links. Please use the link provid
 * This section covers variables and casting of variable types to each other with examples in java. 
   * Source code can be found in [here](https://github.com/Umit-Soylu/Mastering-Java-For-Beginners/tree/Variables).
   * Issues tackled: `variable`, `parameter`, `field`, `local variable`, `casting`.
+
+----------
+Code quality for this repo is [![CodeFactor](https://www.codefactor.io/repository/github/umit-soylu/mastering-java-for-beginners/badge)](https://www.codefactor.io/repository/github/umit-soylu/mastering-java-for-beginners)
