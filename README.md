@@ -18,6 +18,8 @@ As a result, it can be said that java is a trending topic.
   - [Getting Started](#getting-started)
     - [Variables](#variables)
     - [Methods](#methods)
+    - [Packages](#packages)
+
 
 ## Installing Tools
 Here is the lsit of tools that is used in conjuction with this repository
@@ -36,6 +38,11 @@ Following items are covered in their respected links. Please use the link provid
 * This section covers declaring and using methods with examples in java. Also provides insight to JavaDocs.  
   * Source code can be found in [here](https://github.com/Umit-Soylu/Mastering-Java-For-Beginners/tree/Methods).
   * Issues tackled: `method`, `return`, `@param`, `@return`.
+ 
+### Packages
+* This section covers declaring and using packages with same named java classes.  
+  * Source code can be found in [here](https://github.com/Umit-Soylu/Mastering-Java-For-Beginners/tree/Packages).
+  * Issues tackled: `package`, `import`.
   
 ----------
 Code quality for this repo is [![CodeFactor](https://www.codefactor.io/repository/github/umit-soylu/mastering-java-for-beginners/badge)](https://www.codefactor.io/repository/github/umit-soylu/mastering-java-for-beginners)
