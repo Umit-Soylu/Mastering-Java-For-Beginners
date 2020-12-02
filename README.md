@@ -14,9 +14,10 @@ Java has wide variety of applications including but not limited to;
 As a result, it can be said that java is a trending topic. 
 
 ## Overview
-  * [Tools to install](#Installing-tools)
-  * [Getting Started](#Getting-started)
-    * [Variables](#Variables)
+  - [Tools to install](#installing-tools)
+  - [Getting Started](#getting-started)
+    - [Variables](#variables)
+    - [Methods](#methods)
 
 ## Installing Tools
 Here is the lsit of tools that is used in conjuction with this repository
@@ -30,6 +31,11 @@ Following items are covered in their respected links. Please use the link provid
 * This section covers variables and casting of variable types to each other with examples in java. 
   * Source code can be found in [here](https://github.com/Umit-Soylu/Mastering-Java-For-Beginners/tree/Variables).
   * Issues tackled: `variable`, `parameter`, `field`, `local variable`, `casting`.
-
+  
+### Methods
+* This section covers declaring and using methods with examples in java. Also provides insight to JavaDocs.  
+  * Source code can be found in [here](https://github.com/Umit-Soylu/Mastering-Java-For-Beginners/tree/Methods).
+  * Issues tackled: `method`, `return`, `@param`, `@return`.
+  
 ----------
 Code quality for this repo is [![CodeFactor](https://www.codefactor.io/repository/github/umit-soylu/mastering-java-for-beginners/badge)](https://www.codefactor.io/repository/github/umit-soylu/mastering-java-for-beginners)
