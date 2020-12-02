@@ -27,4 +27,6 @@ Here is the lsit of tools that is used in conjuction with this repository
 Following items are covered in their respected links. Please use the link provided to access given course materials.
 
 ### Variables
-* [Hello World](https://github.com/Umit-Soylu/Java-Training/tree/HelloWorld) example for calling a java program from terminal.
+* This section covers variables and its uses cases in java. 
+  * Source code can be found in [here](https://github.com/Umit-Soylu/Java-Training/tree/HelloWorld).
+  * Issues tackled: `variable`, `parameter`, `field`,`local variable`
