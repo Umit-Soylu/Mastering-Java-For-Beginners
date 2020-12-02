@@ -29,4 +29,4 @@ Following items are covered in their respected links. Please use the link provid
 ### Variables
 * This section covers variables and its uses cases in java. 
   * Source code can be found in [here](https://github.com/Umit-Soylu/Java-Training/tree/HelloWorld).
-  * Issues tackled: `variable`, `parameter`, `field`,`local variable`
+  * Issues tackled: `variable`, `parameter`, `field`, `local variable`
