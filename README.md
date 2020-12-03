@@ -19,7 +19,8 @@ As a result, it can be said that java is a trending topic.
     - [Variables](#variables)
     - [Methods](#methods)
     - [Packages](#packages)
-
+  - [Examples Summmary](#examples-summary)
+  - [Exercises Summmary](#exercises-summary)
 
 ## Installing Tools
 Here is the lsit of tools that is used in conjuction with this repository
@@ -33,6 +34,10 @@ Following items are covered in their respected links. Please use the link provid
 * This section covers variables and casting of variable types to each other with examples in java. 
   * Source code can be found in [here](https://github.com/Umit-Soylu/Mastering-Java-For-Beginners/tree/Variables).
   * Issues tackled: `variable`, `parameter`, `field`, `local variable`, `casting`.
+* Coding Examples: Addition and Division operations for `int` values. 
+  * Source code can be found in [here](https://github.com/Umit-Soylu/Mastering-Java-For-Beginners/tree/Examples).
+* Coding Exercise: Multiplication operation for `int` values.
+  * Source code can be found in [here](https://github.com/Umit-Soylu/Mastering-Java-For-Beginners/tree/Exercises).
   
 ### Methods
 * This section covers declaring and using methods with examples in java. Also provides insight to JavaDocs.  
@@ -44,5 +49,21 @@ Following items are covered in their respected links. Please use the link provid
   * Source code can be found in [here](https://github.com/Umit-Soylu/Mastering-Java-For-Beginners/tree/Packages).
   * Issues tackled: `package`, `import`.
   
+## Examples Summary
+* There are multiple coding examples included in this repository. The main package for examples can be found in [here](https://github.com/Umit-Soylu/Mastering-Java-For-Beginners/tree/Examples)
+
+Id | Definition | Solution
+-- | ---------- | ------
+Number-1 | Addition for `int` values | [here](https://github.com/Umit-Soylu/Mastering-Java-For-Beginners/blob/Examples/src/main/java/com/compiled_with_no_errors/examples/mathematical_operations/MathematicalOperations.java)
+Number-2 | Division for `int` values | [here](https://github.com/Umit-Soylu/Mastering-Java-For-Beginners/blob/Examples/src/main/java/com/compiled_with_no_errors/examples/mathematical_operations/MathematicalOperations.java)
+
+## Exercises Summary
+* There are multiple coding exercises included in this repository. The main package for exercises can be found in [here](https://github.com/Umit-Soylu/Mastering-Java-For-Beginners/tree/Exercises)
+
+Id | Definition | Solution
+-- | ---------- | ------
+Number-1 | Multiplication for `int` values | [here](https://github.com/Umit-Soylu/Mastering-Java-For-Beginners/blob/Exercises/src/main/java/com/compiled_with_no_errors/exercises/mathematical_operations/MathematicalOperations.java)
+
+
 ----------
 Code quality for this repo is [![CodeFactor](https://www.codefactor.io/repository/github/umit-soylu/mastering-java-for-beginners/badge)](https://www.codefactor.io/repository/github/umit-soylu/mastering-java-for-beginners)
