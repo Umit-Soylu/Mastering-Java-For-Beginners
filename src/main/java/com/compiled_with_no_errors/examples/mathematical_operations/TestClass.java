@@ -1,4 +1,4 @@
-package com.compiled_with_no_errors.examples;
+package com.compiled_with_no_errors.examples.mathematical_operations;
 
 /**
  * This class executes tests for {@link MathematicalOperations}.
@@ -11,7 +11,7 @@ public class TestClass {
         // Initialize test class.
         operations = new MathematicalOperations();
         
-        double result;
+        long result;
         
         // Test simple case
         int x = 2, y = 3;
