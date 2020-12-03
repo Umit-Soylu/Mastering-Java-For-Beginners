@@ -14,4 +14,15 @@ public class MathematicalOperations {
     public long addition(int x, int y){
         return (long) x + (long) y;
     }
+
+    /**
+     * This method divides its parameter and returns the result.
+     * @param x first parameter
+     * @param y second parameter
+     * @return result of x/y
+     */
+    public float division(int x, int y){
+        return (float) x / y;
+    }
+
 }

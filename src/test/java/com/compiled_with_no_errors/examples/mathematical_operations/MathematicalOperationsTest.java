@@ -29,7 +29,7 @@ class MathematicalOperationsTest {
      * @return inputs and results for each test case
      */
     @NotNull
-    private static Stream<Arguments> testParameters(){
+    private static Stream<Arguments> testAdditionParameters(){
         return Stream.of(
                 Arguments.arguments(5L, 2, 3),
                 Arguments.arguments(-5L, -2, -3),
@@ -42,8 +42,31 @@ class MathematicalOperationsTest {
     }
 
     @ParameterizedTest(name = "{index} => addition({1}, {2}) should return {0}")
-    @MethodSource("testParameters")
+    @MethodSource("testAdditionParameters")
     void addition(long result, int x, int y) {
         assertEquals(result, testClass.addition(x, y));
+    }
+
+    /**
+     * Here all test cases are created
+     * @return inputs and results for each test case
+     */
+    @NotNull
+    private static Stream<Arguments> testDivisionParameters(){
+        return Stream.of(
+                Arguments.arguments(0.6666667F, 2, 3),
+                Arguments.arguments(0.6666667F, -2, -3),
+                Arguments.arguments(0.6666667F, -2, -3),
+                Arguments.arguments(6.0F, 18, 3),
+                Arguments.arguments(Float.POSITIVE_INFINITY, 18, 0),
+                Arguments.arguments(Float.NEGATIVE_INFINITY, -18, 0),
+                Arguments.arguments(Float.NaN, 0, 0)
+        );
+    }
+
+    @ParameterizedTest(name = "{index} => division({1}, {2}) should return {0}")
+    @MethodSource("testDivisionParameters")
+    void division(float result, int x, int y) {
+        assertEquals(result, testClass.division(x, y), 0.0000001);
     }
 }
