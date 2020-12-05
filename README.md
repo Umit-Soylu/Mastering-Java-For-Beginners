@@ -19,8 +19,8 @@ As a result, it can be said that java is a trending topic.
     - [Variables](#variables)
     - [Methods](#methods)
     - [Packages](#packages)
-  - [Examples Summmary](#examples-summary)
-  - [Exercises Summmary](#exercises-summary)
+  - [Examples Summary](#examples-summary)
+  - [Exercises Summary](#exercises-summary)
 
 ## Installing Tools
 Here is the lsit of tools that is used in conjuction with this repository
