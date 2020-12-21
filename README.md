@@ -1,8 +1,8 @@
 # Mastering Java For Beginners
-This reposirtory includes Java Core Course Materials for [Mastering Java For Beginners](https://www.udemy.com/course/draft/3554715/learn/lecture/22985404/?instructorPreviewMode=student_v4#content)  
+This repository includes Java Core Course Materials for [Mastering Java For Beginners](https://www.udemy.com/course/draft/3554715/learn/lecture/22985404/?instructorPreviewMode=student_v4#content)  
 
 ## Why Java?
-Currently Java is the 2<sup>nd</sup> most popular Programming language according to [PYPL](https://pypl.github.io/PYPL.html). 
+Currently, Java is the 2<sup>nd</sup> most popular Programming language according to [PYPL](https://pypl.github.io/PYPL.html). 
 
 Java has wide variety of applications including but not limited to;
   * Web development
@@ -19,11 +19,12 @@ As a result, it can be said that java is a trending topic.
     - [Variables](#variables)
     - [Methods](#methods)
     - [Packages](#packages)
+    - [Modifiers](#modifiers)
   - [Examples Summary](#examples-summary)
   - [Exercises Summary](#exercises-summary)
 
 ## Installing Tools
-Here is the lsit of tools that is used in conjuction with this repository
+Here is the list of tools that is used in conjunction with this repository
   * Java Development Kit [JDK](https://www.oracle.com/java/technologies/javase-downloads.html)
   * [IntelliJ IDEA](https://www.jetbrains.com/idea/)
   
@@ -48,11 +49,18 @@ Following items are covered in their respected links. Please use the link provid
 * This section covers declaring and using packages with same named java classes.  
   * Source code can be found in [here](https://github.com/Umit-Soylu/Mastering-Java-For-Beginners/tree/Packages).
   * Issues tackled: `package`, `import`.
-  
+
+### Modifiers
+* This section covers access modifiers for classes, methods, and fields.
+    * Source code can be found in [here](https://github.com/Umit-Soylu/Mastering-Java-For-Beginners/tree/Modifiers).
+    * Issues tackled: `public`, `protected`, `private`.
+* Also, non-access modifiers are briefly mentioned without any use cases. 
+    * Issues introduced: `final`, `static`, `abstract`, `synchronized`, `volatile`.
+
 ## Examples Summary
 * There are multiple coding examples included in this repository. The main package for examples can be found in [here](https://github.com/Umit-Soylu/Mastering-Java-For-Beginners/tree/Examples)
 
-Id | Definition | Solution
+ID | Definition | Solution
 -- | ---------- | ------
 Number-1 | Addition for `int` values | [here](https://github.com/Umit-Soylu/Mastering-Java-For-Beginners/blob/Examples/src/main/java/com/compiled_with_no_errors/examples/mathematical_operations/MathematicalOperations.java)
 Number-2 | Division for `int` values | [here](https://github.com/Umit-Soylu/Mastering-Java-For-Beginners/blob/Examples/src/main/java/com/compiled_with_no_errors/examples/mathematical_operations/MathematicalOperations.java)
@@ -60,7 +68,7 @@ Number-2 | Division for `int` values | [here](https://github.com/Umit-Soylu/Mast
 ## Exercises Summary
 * There are multiple coding exercises included in this repository. The main package for exercises can be found in [here](https://github.com/Umit-Soylu/Mastering-Java-For-Beginners/tree/Exercises)
 
-Id | Definition | Solution
+ID | Definition | Solution
 -- | ---------- | ------
 Number-1 | Multiplication for `int` values | [here](https://github.com/Umit-Soylu/Mastering-Java-For-Beginners/blob/Exercises/src/main/java/com/compiled_with_no_errors/exercises/mathematical_operations/MathematicalOperations.java)
 
