@@ -14,6 +14,7 @@ public class MathematicalOperations {
     public long multiplication(int x, int y){
         return (long) x * (long) y;
     }
+    private static float delta = 10E-5F;
 
     /**
      * This methods computes division of its parameters and returns the result.
