@@ -3,7 +3,7 @@ package com.compiled_with_no_errors.tutorials.program_flow;
 public class TestProgramFlows {
 
     /**
-     * This method test {@link ArithmeticOperators}
+     * This method tests {@link ArithmeticOperators}
      */
     private static void testArithmeticOperators(){
         // Initialize test class.
@@ -125,8 +125,27 @@ public class TestProgramFlows {
         System.out.println(input+ " - 1 = " + testClass.subtractByOne(input));
     }
 
+    /**
+     * This method tests {@link RelationalOperators}
+     */
+    private static void testRelationalOperators(){
+        // Initialize the class.
+        RelationalOperators testClass = new RelationalOperators();
+
+        // First test
+        float x = 1.0F;
+        float y = -1.0F;
+        testClass.computeRelations(x, y);
+
+        // Second test
+        x = -55.55F;
+        y = -55.55F;
+        testClass.computeRelations(x, y);
+    }
 
     public static void main(String[] args) {
-        testArithmeticOperators();
+        //testArithmeticOperators();
+
+        testRelationalOperators();
     }
 }
