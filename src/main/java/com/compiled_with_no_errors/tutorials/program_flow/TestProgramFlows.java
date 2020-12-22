@@ -158,9 +158,63 @@ public class TestProgramFlows {
         testClass.computeRelations(x, y);
     }
 
+    /**
+     * This class tests {@link BitwiseOperators}
+     */
+    private static void testBitwiseOperators(){
+        // Initialize test class
+        BitwiseOperators testClass = new BitwiseOperators();
+
+        // First test
+        int x = 5; // 0b0101;
+        int y = 4; // 0b0100;
+        testClass.andOperator(x, y);
+
+        // Second test
+        x = 10;     // 0b1010
+        y = 5;      // 0b0101
+        int z = 1;  // 0b0001
+        testClass.orOperator(x, y, z);
+
+        // Third test
+        x = 5;
+        y = 4;
+        testClass.xorOperator(x, y);
+
+        // Forth test
+        x = 5;
+        y = 1;
+        testClass.leftShiftOperator(x, y);
+
+        // Fifth test
+        x = 5;
+        y = 3;
+        testClass.leftShiftOperator(x, y);
+
+        // Sixth test
+        x = 5;
+        y = 33; // Will shift by 1 (33 % 32 = 1)
+        testClass.leftShiftOperator(x, y);
+
+        // Seventh test
+        x = 5;
+        y = 1;
+        testClass.rightShiftOperator(x, y);
+
+        // Eight test
+        x = 5;
+        y = 3;
+        testClass.rightShiftOperator(x, y);
+
+        // Ninth test
+        x = 5;
+        y = 33;
+        testClass.rightShiftOperator(x, y);
+    }
+
     public static void main(String[] args) {
         //testArithmeticOperators();
 
-        testRelationalOperators();
+        testBitwiseOperators();
     }
 }
