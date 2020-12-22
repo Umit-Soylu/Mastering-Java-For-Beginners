@@ -141,6 +141,21 @@ public class TestProgramFlows {
         x = -55.55F;
         y = -55.55F;
         testClass.computeRelations(x, y);
+
+        // Third test
+        x = Float.NaN;
+        y = Float.NaN;
+        testClass.computeRelations(x, y);
+
+        // Forth test
+        x = Float.POSITIVE_INFINITY;
+        y = Float.NaN;
+        testClass.computeRelations(x, y);
+
+        // Fifth test
+        x = Float.POSITIVE_INFINITY;
+        y = Float.NEGATIVE_INFINITY;
+        testClass.computeRelations(x, y);
     }
 
     public static void main(String[] args) {
