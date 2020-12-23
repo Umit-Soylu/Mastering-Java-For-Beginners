@@ -72,7 +72,7 @@ public class AssignmentOperators {
         int temp = x;
         x %= y; // x = x % y;
 
-        System.out.println(temp + " * " + y + " = " + x);
+        System.out.println(temp + " % " + y + " = " + x);
     }
 
     /**
