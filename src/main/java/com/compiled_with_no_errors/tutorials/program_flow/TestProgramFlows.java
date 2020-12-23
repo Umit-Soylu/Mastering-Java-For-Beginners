@@ -212,9 +212,38 @@ public class TestProgramFlows {
         testClass.rightShiftOperator(x, y);
     }
 
+    /**
+     * This class tests {@link LogicalOperators}
+     */
+    private static void testLogicalOperators(){
+        // Initialize the class
+        LogicalOperators testClass = new LogicalOperators();
+
+        int x, y;
+
+        // First test
+        x = -3;
+        y = 4;
+        testClass.applyLogicalOperators(x, y);
+
+        // Second test
+        x = 15;
+        y = -100;
+        testClass.applyLogicalOperators(x, y);
+
+        // Third test
+        x = (int) (Math.random() * 100);            // Becomes 0 .. 100
+        y = (int) Math.round(Math.random() * 100);  // Becomes 0 .. 100
+        testClass.applyLogicalOperators(x, y);
+    }
+
     public static void main(String[] args) {
         //testArithmeticOperators();
 
-        testBitwiseOperators();
+        //testRelationalOperators();
+
+        //testBitwiseOperators();
+
+        testLogicalOperators();
     }
 }
