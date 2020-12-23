@@ -237,6 +237,99 @@ public class TestProgramFlows {
         testClass.applyLogicalOperators(x, y);
     }
 
+    /**
+     * This class tests {@link AssignmentOperators}
+     */
+    private static void testAssignmentOperators(){
+        // Initialize test class
+        AssignmentOperators testClass = new AssignmentOperators();
+
+        // Declare two local variables
+        int x, y;
+
+        // First test
+        x = 5;
+        y = 1500;
+        testClass.addAndAssignItself(x, y);
+
+        // Second test
+        x = Integer.MIN_VALUE;
+        y = -10;
+        testClass.addAndAssignItself(x, y);
+
+        // Third test
+        x = Integer.MAX_VALUE;
+        y = 10;
+        testClass.addAndAssignItself(x, y);
+
+        // Forth test
+        x = 45;
+        y = -33;
+        testClass.subtractAndAssignItself(x, y);
+
+        // Fifth test
+        x = Integer.MIN_VALUE;
+        y = 1;
+        testClass.subtractAndAssignItself(x, y);
+
+        // Sixth test
+        x = Integer.MAX_VALUE;
+        y = -1;
+        testClass.subtractAndAssignItself(x, y);
+
+        // Seventh test
+        x = 150;
+        y = 3;
+        testClass.divideAndAssignItself(x, y);
+
+        // Eighth test
+        x = 150;
+        y = 4;
+        testClass.divideAndAssignItself(x, y);
+
+        // Ninth test
+        x = 5;
+        y = 3;
+        testClass.multiplyAndAssignItself(x, y);
+
+        // Tenth test
+        x = Integer.MAX_VALUE;
+        y = 3;
+        testClass.multiplyAndAssignItself(x, y);
+
+        // Eleventh test
+        x = 10;
+        y = 2;
+        testClass.modAndAssignItself(x, y);
+
+        // Twelfth test
+        x = 10;
+        y = 3;
+        testClass.modAndAssignItself(x, y);
+
+        // Thirteenth test
+        x = 0b0101; // 5
+        y = 0b0100; // 4
+        testClass.bitwiseAndAndAssignItself(x, y);
+
+        // Fourteenth test
+        x = 0b0100; // 4
+        y = 0b1110; // 14
+        testClass.bitwiseOrAndAssignItself(x, y);
+
+        // Fifteenth test
+        x = 0b0001; // 1
+        y = 2;
+        testClass.leftShiftAndAssignItself(x, y);
+
+        // Sixteenth test
+        // Fifteenth test
+        x = 0b0100; // 4
+        y = 2;
+        testClass.rightShiftAndAssignItself(x, y);
+    }
+
+
     public static void main(String[] args) {
         //testArithmeticOperators();
 
@@ -244,6 +337,8 @@ public class TestProgramFlows {
 
         //testBitwiseOperators();
 
-        testLogicalOperators();
+        //testLogicalOperators();
+
+        testAssignmentOperators();
     }
 }
