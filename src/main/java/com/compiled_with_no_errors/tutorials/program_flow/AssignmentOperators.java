@@ -117,7 +117,7 @@ public class AssignmentOperators {
     }
 
     /**
-     * This method accepts two parameters and applies left shift to the left one.
+     * This method accepts two parameters and applies right shift to the left one.
      * @param x first parameter
      * @param y second parameter
      * @implNote Executes 'x <<= y';
