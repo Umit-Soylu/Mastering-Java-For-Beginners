@@ -331,13 +331,13 @@ public class TestProgramFlows {
 
 
     public static void main(String[] args) {
-        //testArithmeticOperators();
+        testArithmeticOperators();
 
-        //testRelationalOperators();
+        testRelationalOperators();
 
-        //testBitwiseOperators();
+        testBitwiseOperators();
 
-        //testLogicalOperators();
+        testLogicalOperators();
 
         testAssignmentOperators();
     }
