@@ -1,4 +1,4 @@
-package com.compiled_with_no_errors.tutorials.program_flow;
+package com.compiled_with_no_errors.tutorials.program_flow.operators;
 
 public class TestProgramFlows {
 
