@@ -63,4 +63,40 @@ public class Loops {
             System.out.println("Current value for our number is " + tmpValue);
         }
     }
+
+    /**
+     * This method will print numbers from start to end excluding coefficient multiplications
+     * @param start Start value
+     * @param end   End value
+     * @param skipCoefficient skip coefficient
+     */
+    protected void printNumbersExceptGivenCriteria(int start, int end, int skipCoefficient){
+        for (int i = start; i < end; i++) {
+
+            // Skip if current number is multiplication of coefficient
+            if (i % skipCoefficient == 0)
+                continue; //Exits the loop and continues with next iteration
+
+            // Print the number
+            System.out.println("Number is " + i);
+        }
+    }
+
+    /**
+     * This method will print numbers from start to end but cease execution if criteria met
+     * @param start Start value
+     * @param end   End value
+     * @param criteria Criteria to cease execution
+     */
+    protected void printNumbersTillCriteriaHit(int start, int end, int criteria){
+        for (int i = start; i < end; i++) {
+
+            // Cease execution if current number equals to criteria
+            if (i == criteria)
+                break; // Stop the loop and exits.
+
+            // Print the number
+            System.out.println("Number is " + i);
+        }
+    }
 }

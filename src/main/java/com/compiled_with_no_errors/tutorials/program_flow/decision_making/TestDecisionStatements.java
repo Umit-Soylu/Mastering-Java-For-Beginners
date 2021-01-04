@@ -99,9 +99,93 @@ public class TestDecisionStatements {
 
     }
 
+    /**
+     * This method tests {@link Loops} with loop control cases
+     */
+    private static void testLoopControl(){
+        int start, end, coefficient;
+
+        // Initialize test case
+        Loops testClass = new Loops();
+
+        // First test
+        System.out.println("First test");
+        start = 0;
+        end = 25;
+        coefficient = 3;
+        testClass.printNumbersExceptGivenCriteria(start, end, coefficient);
+
+        // Second test
+        System.out.println("Second test");
+        start = -50;
+        end = -25;
+        coefficient = 2;
+        testClass.printNumbersExceptGivenCriteria(start, end, coefficient);
+
+        // Third test
+        System.out.println("Third test");
+        start = 10;
+        end = 15;
+        coefficient = 16;
+        testClass.printNumbersTillCriteriaHit(start, end, coefficient);
+
+        // Forth test
+        System.out.println("Forth test");
+        start = 10;
+        end = 15;
+        coefficient = 13;
+        testClass.printNumbersTillCriteriaHit(start, end, coefficient);
+    }
+
+    /**
+     * This method tests {@link SwitchDecision}
+     */
+    private static void testSwitchDecision(){
+        byte index;
+
+        // Initialize test class
+        SwitchDecision testClass = new SwitchDecision();
+
+        // First test
+        System.out.println("First test");
+        index = 2;
+        testClass.printMonths(index);
+
+        // Second test
+        System.out.println("Second test");
+        index = -51;
+        testClass.printMonths(index);
+
+        // Third test
+        System.out.println("Third test");
+        index = 10;
+        testClass.printMonths(index);
+
+        // Forth test
+        System.out.println("Forth test");
+        index = 8;
+        testClass.sumValuesFromTen(index);
+
+        // Fifth test
+        System.out.println("Fifth test");
+        index = 2;
+        testClass.sumValuesFromTen(index);
+
+        // Sixth test
+        System.out.println("Fifth test");
+        index = 100;
+        testClass.sumValuesFromTen(index);
+
+    }
+
+
     public static void main(String[] args) {
-        //testIfElseDecisions();
+        testIfElseDecisions();
 
         testLoops();
+
+        testLoopControl();
+
+        testSwitchDecision();
     }
 }
