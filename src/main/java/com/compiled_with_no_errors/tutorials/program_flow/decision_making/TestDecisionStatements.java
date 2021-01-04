@@ -53,7 +53,55 @@ public class TestDecisionStatements {
         System.out.println(number + " is divisible by: " + testClass.isGivenNumberDivisibleByTwoUpToFive(number));
     }
 
+    /**
+     * This method tests {@link Loops}
+     */
+    private static void testLoops(){
+        int maxNumber;
+
+        // Initialize test class
+        Loops testClass = new Loops();
+
+        // First test
+        System.out.println("First Test");
+        maxNumber = 5;
+        testClass.printNumbers(maxNumber);
+
+        // Second test
+        System.out.println("Second Test");
+        maxNumber = -3;
+        testClass.printNumbers(maxNumber);
+
+        // Third test
+        //System.out.println("Third Test");
+        //maxNumber = Integer.MAX_VALUE;
+        //testClass.printNumbers(maxNumber);
+
+        // Forth test
+        System.out.println("Forth Test");
+        maxNumber = 5;
+        testClass.printNumbersAtLeastOnce(maxNumber);
+
+        // Fifth Test
+        System.out.println("Fifth Test");
+        maxNumber = -3;
+        testClass.printNumbersAtLeastOnce(maxNumber);
+
+        // Sixth test
+        System.out.println("Sixth Test");
+        maxNumber = 5;
+        testClass.printNumbersWithALoop(maxNumber);
+
+        // Seventh test
+        System.out.println("Seventh Test");
+        int[] array = new int[]{10, 20, 35, 49, 5};
+        testClass.printNumbersOfArray(array);
+
+    }
+
     public static void main(String[] args) {
-        testIfElseDecisions();
+        //testIfElseDecisions();
+
+        testLoops();
     }
 }
