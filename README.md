@@ -20,6 +20,7 @@ As a result, it can be said that java is a trending topic.
     - [Methods](#methods)
     - [Packages](#packages)
     - [Modifiers](#modifiers)
+    - [Program Flow](#program-flow)
   - [Examples Summary](#examples-summary)
   - [Exercises Summary](#exercises-summary)
 
@@ -56,6 +57,26 @@ Following items are covered in their respected links. Please use the link provid
     * Issues tackled: `public`, `protected`, `private`.
 * Also, non-access modifiers are briefly mentioned without any use cases. 
     * Issues introduced: `final`, `static`, `abstract`, `synchronized`, `volatile`.
+
+### Program Flow
+* This section covers [Operators](#operators) & [Decision-Making](#decision-making) concepts.
+  * Source code can be found in [here](https://github.com/Umit-Soylu/Mastering-Java-For-Beginners/tree/program_flow).
+
+#### Operators
+* Operators consist of arithmetic, bitwise, logical, assignment, and relational operators. 
+    * Arithmetic operators issues tackled: `+`, `-`, `*`, `/`, `%`, `++`, `--`.
+    * Bitwise operators issues tackled: `<<`, `>>`, `<<<`, `&`, `|`, `^`.
+    * Logical operators issues tackled: `&&`, `||`, `==`.
+    * Assignment operators issues tackled: `=`, `+=`, `-=`, `*=`, `/=`, `%=`, `&=`, `|=`, `^=`, `<<=`, `>>=`.
+    * Relational operators issues tackled: `<`, `>`, `<=`, `>=`, `!=`, `==`.
+
+#### Decision-Making
+* Decision-making concepts consist of if ... else and switch cases, loops, and loop control statements.
+    * If .. else statement issues tackled: `if`, `if .. else`, `if .. else if .. else`, `switch`.
+    * Loop issues tackled: `for`, `for each`, `while`, `do .. while`.
+    * Loop control statement issues tackled: `break`, `continue`.
+    
+
 
 ## Examples Summary
 * There are multiple coding examples included in this repository. The main package for examples can be found in [here](https://github.com/Umit-Soylu/Mastering-Java-For-Beginners/tree/Examples)
