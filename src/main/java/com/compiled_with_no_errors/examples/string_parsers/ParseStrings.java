@@ -18,6 +18,10 @@ public class ParseStrings {
      * @return {@code true} if parenthesis match, {@code false} otherwise.
      */
     public boolean isParenthesisMatched(String input){
+        // Return true if there is nothing to parse
+        if (input.isEmpty() || input.isBlank())
+            return true;
+
         // Convert input to an character array
         char[] inputArray = input.toCharArray();
 

@@ -35,7 +35,8 @@ class ParseStringsTest {
                 Arguments.arguments(true, "((2+3))"),
                 Arguments.arguments(false, "(2+3))"),
                 Arguments.arguments(false, "((2+3)"),
-                Arguments.arguments(true, "(())(2+3)")
+                Arguments.arguments(true, "(())(2+3)"),
+                Arguments.arguments(true, "")
         );
     }
 
