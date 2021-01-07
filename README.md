@@ -82,6 +82,7 @@ Following items are covered in their respected links. Please use the link provid
 ### Constructors
 * This section covers default constructors, how to define custom constructors, and use cases.
   * Source code can be found in [here](https://github.com/Umit-Soylu/Mastering-Java-For-Beginners/tree/Constructors/src/main/java/com/compiled_with_no_errors/tutorials/constructors).
+      * Issues tackled: `public`, `protected`, `private` constructors, and `final` variables.
 
 ## Examples Summary
 * There are multiple coding examples included in this repository. The main package for examples can be found in [here](https://github.com/Umit-Soylu/Mastering-Java-For-Beginners/tree/Examples)
