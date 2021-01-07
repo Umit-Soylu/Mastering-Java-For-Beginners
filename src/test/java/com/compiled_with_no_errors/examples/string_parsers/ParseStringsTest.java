@@ -8,6 +8,7 @@ import org.junit.jupiter.params.provider.MethodSource;
 
 import java.util.stream.Stream;
 
+import static org.junit.jupiter.api.Assertions.assertArrayEquals;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 class ParseStringsTest {
@@ -24,7 +25,7 @@ class ParseStringsTest {
     }
 
     /**
-     * This method provides all test cases
+     * This method provides all test cases for {@link ParseStrings#isParenthesisMatched(String)}
      * @return Arguments to be executed for each test
      */
     private static Stream<Arguments> testParameters(){
@@ -44,6 +45,26 @@ class ParseStringsTest {
     @MethodSource("testParameters")
     void isParenthesisMatchedTest(boolean result, String input){
         assertEquals(result, testClass.isParenthesisMatched(input));
+    }
+
+    /**
+     * This method provides all test cases for {@link ParseStrings#parseTokens(String, char)}
+     * @return Arguments to be executed for each test
+     */
+    private static Stream<Arguments> testTokenParameters(){
+        return Stream.of(
+                Arguments.arguments("Car-345", '-', new String[]{"Car", "345"}),
+                Arguments.arguments("Animal:Zebra", ':', new String[]{"Animal", "Zebra"}),
+                Arguments.arguments("Mastering Java", ' ', new String[]{"Mastering", "Java"}),
+                Arguments.arguments("MasteringJava", ' ', new String[2]),
+                Arguments.arguments("Mastering,Java", ' ', new String[2]),
+                Arguments.arguments(" Mastering,Java", ' ', new String[]{"", "Mastering,Java"})
+        );
+    }
+    @ParameterizedTest(name="{index} = {0} with {1} should generate {2}")
+    @MethodSource("testTokenParameters")
+    void parseTokens(String input, char key, String[] tokens) {
+        assertArrayEquals(tokens, testClass.parseTokens(input, key));
     }
 
     /*

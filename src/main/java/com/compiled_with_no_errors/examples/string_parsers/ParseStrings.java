@@ -50,4 +50,34 @@ public class ParseStrings {
          */
         return leftParenthesis[0] == ' ';
     }
+
+    /**
+     * <p>This method will accept an input and divide it by the given key value and generate 2 tokens based on that.</p>
+     * <p>Here are the valid execution examples:</p>
+     * <ul>
+     *     <li>input='Car-345' & key='-' will generate an array of tokens as 'Car' & '345'</li>
+     *     <li>input='Animal:Zebra' & key=':' will generate an array of tokens as 'Animal' & 'Zebra'</li>
+     *     <li>input='Mastering Java' & key=' ' will generate an array of tokens as 'Mastering' & 'Java'</li>
+     * </ul>
+     * @param input Input to be parsed
+     * @param key Character to discriminate tokens
+     * @return Array of {@link String} with 2 tokens
+     */
+    public String[] parseTokens(String input, char key){
+        // Declare and initialize the tokens
+        String[] tokens = new String[2];
+
+        // Generate an array to search for.
+        char[] inputArray = input.toCharArray();
+
+        for (int i = 0; i < inputArray.length; i++) {
+            if (inputArray[i] == key){
+                tokens[0] = input.substring(0, i);
+                tokens[1] = input.substring(i+1);
+                break;
+            }
+        }
+
+        return tokens;
+    }
 }
