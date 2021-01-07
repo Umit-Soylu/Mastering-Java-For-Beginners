@@ -4,7 +4,7 @@ package com.compiled_with_no_errors.tutorials.constructors;
  * This class have predefined constructors
  */
 public class CustomConstructor {
-    private String name;
+    private final String name;
 
     /**
      * Constructor for the class
