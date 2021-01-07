@@ -76,7 +76,7 @@ Following items are covered in their respected links. Please use the link provid
     * If .. else statement issues tackled: `if`, `if .. else`, `if .. else if .. else`, `switch`.
     * Loop issues tackled: `for`, `for each`, `while`, `do .. while`.
     * Loop control statement issues tackled: `break`, `continue`.
-* Coding Exercise: Matching Parenthesis checker for `String` inputs.
+* Coding Example: Matching Parenthesis checker for `String` inputs and token generator from `String` inputs.
     * Source code can be found in [here](https://github.com/Umit-Soylu/Mastering-Java-For-Beginners/blob/master/src/main/java/com/compiled_with_no_errors/examples/string_parsers/ParseStrings.java)
     
 ### Constructors
@@ -92,6 +92,7 @@ ID | Definition | Solution
 Number-1 | Addition for `int` values | [here](https://github.com/Umit-Soylu/Mastering-Java-For-Beginners/blob/Examples/src/main/java/com/compiled_with_no_errors/examples/mathematical_operations/MathematicalOperations.java)
 Number-2 | Division for `int` values | [here](https://github.com/Umit-Soylu/Mastering-Java-For-Beginners/blob/Examples/src/main/java/com/compiled_with_no_errors/examples/mathematical_operations/MathematicalOperations.java)
 Number-3 | String parser for matching parenthesis | [here](https://github.com/Umit-Soylu/Mastering-Java-For-Beginners/blob/master/src/main/java/com/compiled_with_no_errors/examples/string_parsers/ParseStrings.java)
+Number-4 | Token generator from Strings | [here](https://github.com/Umit-Soylu/Mastering-Java-For-Beginners/blob/master/src/main/java/com/compiled_with_no_errors/examples/string_parsers/ParseStrings.java)
 
 ## Exercises Summary
 * There are multiple coding exercises included in this repository. The main package for exercises can be found in [here](https://github.com/Umit-Soylu/Mastering-Java-For-Beginners/tree/Exercises)
