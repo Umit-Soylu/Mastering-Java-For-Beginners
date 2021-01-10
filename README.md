@@ -105,5 +105,5 @@ Number-2 | Basic Mathematical operator executor for `String` input | [here](http
 
 ----------
 <div style="text-align: right">
-[![CodeFactor](https://www.codefactor.io/repository/github/umit-soylu/mastering-java-for-beginners/badge)](https://www.codefactor.io/repository/github/umit-soylu/mastering-java-for-beginners)
+<a href="https://www.codefactor.io/repository/github/umit-soylu/mastering-java-for-beginners"><img src="https://www.codefactor.io/repository/github/umit-soylu/mastering-java-for-beginners/badge" alt="CodeFactor" /></a>
 </div>
