@@ -52,6 +52,8 @@ public class MathematicalOperations {
             case "/":
                 result = (double) x / y;
                 break;
+            default:
+                break;
         }
 
         return result;
