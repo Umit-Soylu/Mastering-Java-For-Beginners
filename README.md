@@ -104,4 +104,6 @@ Number-2 | Basic Mathematical operator executor for `String` input | [here](http
 
 
 ----------
-Code quality for this repo is [![CodeFactor](https://www.codefactor.io/repository/github/umit-soylu/mastering-java-for-beginners/badge)](https://www.codefactor.io/repository/github/umit-soylu/mastering-java-for-beginners)
+<div style="text-align: right">
+[![CodeFactor](https://www.codefactor.io/repository/github/umit-soylu/mastering-java-for-beginners/badge)](https://www.codefactor.io/repository/github/umit-soylu/mastering-java-for-beginners)
+</div>
