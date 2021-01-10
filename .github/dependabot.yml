@@ -8,5 +8,4 @@ updates:
   - package-ecosystem: "maven" # See documentation for possible values
     directory: "/" # Location of package manifests
     schedule:
-      interval: "weekly" 
-    target_branch: "master"
+      interval: "weekly"
