@@ -31,11 +31,15 @@ public class IfElseDecisions {
      * @return true if odd; false otherwise
      */
     protected boolean isGivenNumberEven(byte number){
+        // Same can be achieved via one line
+        /*
         if (number % 2 == 0) {
             return true;
         } else {
             return false;
         }
+         */
+        return (number % 2 == 0);
     }
 
     /**
@@ -44,10 +48,11 @@ public class IfElseDecisions {
      * @return true if divisible; false otherwise
      */
     protected boolean isGivenNumberDivisibleByThree(byte number){
-        boolean result;
-        result = (number % 3 == 0) ? true : false;
+        // Same can be achieved in more simplified manner.
+        // boolean result;
+        // result = (number % 3 == 0) ? true : false;
 
-        return result;
+        return number % 3 == 0;
     }
 
     /**
