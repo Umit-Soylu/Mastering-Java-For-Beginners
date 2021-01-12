@@ -88,7 +88,7 @@ Following items are covered in their respected links. Please use the link provid
 * There are multiple coding examples included in this repository. The main package for examples can be found in [here](https://github.com/Umit-Soylu/Mastering-Java-For-Beginners/tree/Examples)
 
 ID   | Definition | Solution
-:--: | :--------- | :-------
+:--: | :--------- | :------:
 1 | Addition for `int` values | [here](https://github.com/Umit-Soylu/Mastering-Java-For-Beginners/blob/Examples/src/main/java/com/compiled_with_no_errors/examples/mathematical_operations/MathematicalOperations.java)</li>
 2 | Division for `int` values | [here](https://github.com/Umit-Soylu/Mastering-Java-For-Beginners/blob/Examples/src/main/java/com/compiled_with_no_errors/examples/mathematical_operations/MathematicalOperations.java)
 3 | String parser for matching parenthesis | [here](https://github.com/Umit-Soylu/Mastering-Java-For-Beginners/blob/master/src/main/java/com/compiled_with_no_errors/examples/string_parsers/ParseStrings.java)
@@ -98,7 +98,7 @@ ID   | Definition | Solution
 * There are multiple coding exercises included in this repository. The main package for exercises can be found in [here](https://github.com/Umit-Soylu/Mastering-Java-For-Beginners/tree/Exercises)
 
 ID   | Definition | Solution
-:--: | :--------- | :-------
+:--: | :--------- | :------:
 1 | Multiplication for `int` values | [here](https://github.com/Umit-Soylu/Mastering-Java-For-Beginners/blob/Exercises/src/main/java/com/compiled_with_no_errors/exercises/mathematical_operations/MathematicalOperations.java)
 2 | Basic Mathematical operator executor for `String` input | [here](https://github.com/Umit-Soylu/Mastering-Java-For-Beginners/blob/master/src/main/java/com/compiled_with_no_errors/exercises/string_parsers/MathematicalOperations.java)
 
