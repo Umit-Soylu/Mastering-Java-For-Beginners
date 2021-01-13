@@ -28,7 +28,7 @@ public class Factory {
 
         // Instantiate cars array.
         for (int i = 0; i < numberOfCars; i++) {
-            cars[i] = new Car(i+1);
+            cars[i] = new Car();
         }
 
         NUMBER_OF_CARS_BUILT += numberOfCars;
