@@ -95,7 +95,12 @@ Following items are covered in their respected links. Please use the link provid
 * This section covers the definition of class, object and its implementations.
     * Source code can be found in [here](https://github.com/Umit-Soylu/Mastering-Java-For-Beginners/tree/Objects).
     * Issues tackled: `static`.
-    
+
+#### Enumerations
+* This section covers enumerations in java, basically a specialized list of objects.
+    * Source code can be found in [here](https://github.com/Umit-Soylu/Mastering-Java-For-Beginners/tree/Enum).
+    * Issues tackled: `enum`.
+
 ## Examples Summary
 * There are multiple coding examples included in this repository. The main package for examples can be found in [here](https://github.com/Umit-Soylu/Mastering-Java-For-Beginners/tree/Examples)
 
@@ -113,7 +118,7 @@ ID   | Definition | Solution
 :--: | :--------- | :------:
 1 | Multiplication for `int` values | [here](https://github.com/Umit-Soylu/Mastering-Java-For-Beginners/blob/Exercises/src/main/java/com/compiled_with_no_errors/exercises/mathematical_operations/MathematicalOperations.java)
 2 | Basic Mathematical operator executor for `String` input | [here](https://github.com/Umit-Soylu/Mastering-Java-For-Beginners/blob/master/src/main/java/com/compiled_with_no_errors/exercises/string_parsers/MathematicalOperations.java)
-
+3 | Execution of project phases via `enum` | [here](https://github.com/Umit-Soylu/Mastering-Java-For-Beginners/tree/master/src/main/java/com/compiled_with_no_errors/exercises/project_phases/ProjectPhases.java) 
 
 ----------
 [![CodeQuality](https://www.code-inspector.com/project/17653/score/svg)](https://frontend.code-inspector.com/public/project/17653/Mastering-Java-For-Beginners/dashboard)
