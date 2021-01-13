@@ -20,8 +20,12 @@ As a result, it can be said that java is a trending topic.
     - [Methods](#methods)
     - [Packages](#packages)
     - [Modifiers](#modifiers)
-    - [Program Flow](#program-flow)
+    - [Program Flow Mechanisms](#program-flow)
+        - [Operators](#operators)
+        - [Decision Making Concepts](#decision-making)
     - [Constructors](#constructors)
+    - [Object-Oriented Programming](#object-oriented-programming)
+        - [Object vs. Class](#object-vs-class)
   - [Examples Summary](#examples-summary)
   - [Exercises Summary](#exercises-summary)
 
@@ -84,6 +88,14 @@ Following items are covered in their respected links. Please use the link provid
   * Source code can be found in [here](https://github.com/Umit-Soylu/Mastering-Java-For-Beginners/tree/Constructors/src/main/java/com/compiled_with_no_errors/tutorials/constructors).
       * Issues tackled: `public`, `protected`, `private` constructors, and `final` variables.
 
+### Object-Oriented Programming
+* The object-oriented programming capabilities of Java is covered in this section.
+   
+#### Object vs. Class
+* This section covers the definition of class, object and its implementations.
+    * Source code can be found in [here](https://github.com/Umit-Soylu/Mastering-Java-For-Beginners/tree/Objects).
+    * Issues tackled: `static`.
+    
 ## Examples Summary
 * There are multiple coding examples included in this repository. The main package for examples can be found in [here](https://github.com/Umit-Soylu/Mastering-Java-For-Beginners/tree/Examples)
 
@@ -104,4 +116,5 @@ ID   | Definition | Solution
 
 
 ----------
-[![CodeFactor](https://www.codefactor.io/repository/github/umit-soylu/mastering-java-for-beginners/badge)](https://www.codefactor.io/repository/github/umit-soylu/mastering-java-for-beginners)
+[![CodeQuality](https://www.code-inspector.com/project/17653/score/svg)](https://frontend.code-inspector.com/public/project/17653/Mastering-Java-For-Beginners/dashboard)
+[![CodeGrade](https://www.code-inspector.com/project/17653/status/svg)](https://frontend.code-inspector.com/public/project/17653/Mastering-Java-For-Beginners/dashboard)
