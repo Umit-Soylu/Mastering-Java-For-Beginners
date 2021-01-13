@@ -31,6 +31,6 @@ class CarCollectionTest {
        CarCollection car = CarCollection.valueOf("business");
        assertEquals(CarCollection.business, car);
 
-        System.out.println(car + " with ordinal " + car.ordinal() + " with brand " + car.getBrand());
+       System.out.println(car + " with ordinal " + car.ordinal() + " with brand " + car.getBrand());
     }
 }
