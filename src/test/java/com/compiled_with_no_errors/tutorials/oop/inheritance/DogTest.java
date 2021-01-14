@@ -4,8 +4,8 @@ import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
-import static org.junit.jupiter.api.Assertions.assertArrayEquals;
 import static org.junit.jupiter.api.Assertions.assertEquals;
+
 class DogTest {
     private Dog testClass;
 
@@ -20,25 +20,17 @@ class DogTest {
     }
 
     @Test
+    void getKind() {
+        assertEquals("Dog", testClass.getKind());
+    }
+
+    @Test
     void bark() {
         testClass.bark();
     }
 
-
     @Test
-    void move() {
-        int[] currentLocation = new int[]{0 ,0};
-
-        assertArrayEquals(currentLocation, testClass.getLocation());
-
-        testClass.move();
-        for (int loc : testClass.getLocation()) {
-            System.out.println(loc);
-        }
-    }
-
-    @Test
-    void getKind() {
-        assertEquals("Dog", testClass.getKind());
+    void printCommonFields() {
+        testClass.printCommonFields();
     }
 }

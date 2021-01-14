@@ -1,35 +1,48 @@
 package com.compiled_with_no_errors.tutorials.oop.inheritance;
 
 /**
- * The common ancestor in evolution tree.
+ * This class defines capabilities of Animals
  */
 public class Animal {
+    // This field preserves the location of the animal
+    private int[] location;
+
+    // This field stores the kind of the animal, ex: ship, dog, bird, etc.
     private final String kind;
 
-    // Stored the information of the animal.
-    private int[] location;
+    // This field exist only for tutorial purposes
+    protected final int commonField = 0;
+
     /**
-     * The constructor for animals
-     * @param kind kind of the animal.
+     * Constructor to create an animal
+     * @param kind kind of the animal
      */
     public Animal(String kind) {
         this.kind = kind;
-        location = new int[]{0, 0};
+        location = new int[]{0, 0}; // This allows animal to start in lower left position (default).
     }
 
     /**
-     * This allow given animal to move to a new location
+     * Animal moves randomly
      */
     public void move(){
-        location[0] += Math.random()*5;
-        location[1] += Math.random()*5;
+        location[0] += Math.random() * 10;
+        location[1] += Math.random() * 10;
     }
 
-    public int[] getLocation() {
-        return location;
-    }
-
+    /**
+     * Information about animal kind
+     * @return the kind of the animal
+     */
     public String getKind() {
         return kind;
+    }
+
+    /**
+     * Information about animal location
+     * @return location of the animal
+     */
+    public int[] getLocation() {
+        return location;
     }
 }

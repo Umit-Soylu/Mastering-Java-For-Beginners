@@ -1,30 +1,28 @@
 package com.compiled_with_no_errors.tutorials.oop.inheritance;
 
-/**
- * Dogs are humans best friend.
- */
 public class Dog extends Animal{
-
+    // This field exist only for tutorial purposes
+    private final int commonField = 1;
 
     /**
-     * The constructor for Dog
+     * Constructor to create a dog
      */
     public Dog() {
         super("Dog");
     }
 
     /**
-     * Constructor for child of Dog
-     * @param kind Kind of the input
-     */
-    protected Dog(String kind){
-        super(kind);
-    }
-
-    /**
-     * Dogs can bark, while some other animals cannot.
+     * Dogs can bark if needed.
      */
     public void bark(){
         System.out.println("Barking!!!");
+    }
+
+    /**
+     * This method shows use of 'this' and 'super' keyword.
+     */
+    public void printCommonFields(){
+        System.out.println("Animal field is " + super.commonField);
+        System.out.println("Dog field is " + this.commonField);
     }
 }
