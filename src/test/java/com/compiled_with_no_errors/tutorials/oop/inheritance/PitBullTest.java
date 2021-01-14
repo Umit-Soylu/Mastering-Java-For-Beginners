@@ -20,6 +20,6 @@ class PitBullTest {
 
     @Test
     void getKind() {
-        assertEquals("Dog", testClass.getKind());
+        assertEquals("PitBull", testClass.getKind());
     }
 }

@@ -12,6 +12,14 @@ public class Dog extends Animal{
     }
 
     /**
+     * Specific constructor for each breed.
+     * @param breed Breed of the dog
+     */
+    protected Dog(String breed){
+        super(breed);
+    }
+
+    /**
      * Dogs can bark if needed.
      */
     public void bark(){

@@ -21,9 +21,9 @@ class BirdTest {
     @Test
     void fly() {
         int[] defaultLocation = new int[]{0, 0};
-        assertArrayEquals(defaultLocation, testClass.getLocation());
+        assertArrayEquals(defaultLocation, testClass.getLocation().getLocation());
 
         testClass.fly();
-        System.out.println(testClass.getLocation()[0] + ", " + testClass.getLocation()[1]);
+        System.out.println(testClass.getLocation());
     }
 }

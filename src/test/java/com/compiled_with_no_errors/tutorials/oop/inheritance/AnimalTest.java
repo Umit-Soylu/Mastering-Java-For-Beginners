@@ -24,12 +24,11 @@ class AnimalTest {
     void move() {
         int[] location = new int[]{0, 0};
 
-        assertArrayEquals(location, genericAnimal.getLocation());
+        assertArrayEquals(location, genericAnimal.getLocation().getLocation());
 
         genericAnimal.move();
-        for (int loc : genericAnimal.getLocation()) {
-            System.out.println("loc = " + loc);
-        }
+
+        System.out.println(genericAnimal.getLocation());
     }
 
     @Test
