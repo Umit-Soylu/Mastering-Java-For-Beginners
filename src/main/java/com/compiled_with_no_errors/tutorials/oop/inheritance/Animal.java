@@ -15,30 +15,32 @@ public class Animal {
 
     /**
      * Constructor to create an animal
-     *
      * @param kind kind of the animal
      */
     public Animal(String kind) {
         this.kind = kind;
-        location = new Location();
+        location = new Location(); // This allows animal to start in lower left position (default).
     }
 
     /**
      * Animal moves randomly
      */
-    public void move() {
+    public void move(){
         location.updateLocation((int) (Math.random() * 10), (int) (Math.random() * 10));
     }
 
     /**
      * Information about animal kind
-     *
      * @return the kind of the animal
      */
     public String getKind() {
         return kind;
     }
 
+    /**
+     * Information about animal location
+     * @return location of the animal
+     */
     public Location getLocation() {
         return location;
     }

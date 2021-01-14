@@ -22,9 +22,9 @@ class AnimalTest {
 
     @Test
     void move() {
-        int[] location = new int[]{0, 0};
+        Location location = new Location();
 
-        assertArrayEquals(location, genericAnimal.getLocation().getLocation());
+        assertArrayEquals(location.getLocation(), genericAnimal.getLocation().getLocation());
 
         genericAnimal.move();
 
