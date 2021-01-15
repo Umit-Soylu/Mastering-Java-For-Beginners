@@ -3,7 +3,7 @@ package com.compiled_with_no_errors.tutorials.oop.inheritance;
 /**
  * This class provides 2D location information
  */
-public class Location {
+public class Location{
     // Stored 2D location information.
     private int x, y;
 
