@@ -8,7 +8,7 @@ import static org.junit.jupiter.api.Assertions.*;
 
 class LimitedCompanyTest {
     LimitedCompany testClass;
-    private String owner = "Compiled with no errors";
+    private final String owner = "Compiled with no errors";
     private final String[] partners = new String[]{"Mastering", "Java", "For", "Beginners"};
 
     @BeforeEach
@@ -58,5 +58,15 @@ class LimitedCompanyTest {
     @Test
     void isCompanyActive() {
         assertTrue(testClass.isCompanyActive());
+    }
+
+    @Test
+    void getOwner() {
+        assertEquals(owner, testClass.getOwner());
+    }
+
+    @Test
+    void getPartners() {
+        assertArrayEquals(partners, testClass.getPartners());
     }
 }

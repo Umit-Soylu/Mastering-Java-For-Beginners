@@ -2,7 +2,7 @@ package com.compiled_with_no_errors.tutorials.oop.abstraction;
 
 public class LimitedCompany extends GenericCompany{
 
-    private String[] partners;
+    private final String[] partners;
 
     /**
      * Method to create limited company
@@ -16,5 +16,9 @@ public class LimitedCompany extends GenericCompany{
 
         // Partners works for our company should be added.
         super.hire(partners.length);
+    }
+
+    public String[] getPartners() {
+        return partners;
     }
 }
