@@ -13,22 +13,6 @@ Java has wide variety of applications including but not limited to;
 
 As a result, it can be said that java is a trending topic. 
 
-## Overview
-  - [Tools to install](#installing-tools)
-  - [Getting Started](#getting-started)
-    - [Variables](#variables)
-    - [Methods](#methods)
-    - [Packages](#packages)
-    - [Modifiers](#modifiers)
-    - [Program Flow Mechanisms](#program-flow)
-        - [Operators](#operators)
-        - [Decision Making Concepts](#decision-making)
-    - [Constructors](#constructors)
-    - [Object-Oriented Programming](#object-oriented-programming)
-        - [Object vs. Class](#object-vs-class)
-  - [Examples Summary](#examples-summary)
-  - [Exercises Summary](#exercises-summary)
-
 ## Installing Tools
 Here is the list of tools that is used in conjunction with this repository
   * Java Development Kit [JDK](https://www.oracle.com/java/technologies/javase-downloads.html)
