@@ -1,72 +1,48 @@
 package com.compiled_with_no_errors.tutorials.oop.abstraction;
 
-import org.junit.jupiter.api.AfterEach;
+import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
-import static org.junit.jupiter.api.Assertions.*;
-
 class LimitedCompanyTest {
-    LimitedCompany testClass;
-    private final String owner = "Compiled with no errors";
-    private final String[] partners = new String[]{"Mastering", "Java", "For", "Beginners"};
+    private LimitedCompany testCompany;
 
     @BeforeEach
     void setUp() {
-        testClass = new LimitedCompany(owner, partners, 10);
+        testCompany = new LimitedCompany("Mastering Java", "Compiled with No Errors", 5);
+        Assertions.assertEquals(1/50f, testCompany.occupancyRate());
     }
 
-    @AfterEach
-    void tearDown() {
-        testClass = null;
-    }
 
     @Test
     void yearlyProfit() {
-        assertEquals(100, testClass.yearlyProfit());
+        testCompany.addIncome(1000F);
+        Assertions.assertEquals(1000F, testCompany.yearlyProfit());
+
+        testCompany.addIncome(500F);
+        Assertions.assertEquals(1500F, testCompany.yearlyProfit());
+
+        testCompany.addExpense(800F);
+        Assertions.assertEquals(700F, testCompany.yearlyProfit());
     }
 
     @Test
     void occupancyRate() {
-        assertEquals((float) (1 + partners.length)/10, testClass.occupancyRate());
-    }
+        testCompany.hireEmployee("Person-1");
+        Assertions.assertEquals(2/50F, testCompany.occupancyRate());
 
-    @Test
-    void updateNumberOfRequiredEmployees() {
-        testClass.updateNumberOfRequiredEmployees(5);
-        assertEquals((float) (1 + partners.length)/5, testClass.occupancyRate());
-    }
+        testCompany.hireEmployee("Person-2");
+        Assertions.assertEquals(3/50F, testCompany.occupancyRate());
 
-    @Test
-    void hire() {
-        testClass.hire(5);
-        assertEquals(1.0, testClass.occupancyRate());
-    }
-
-    @Test
-    void terminateEmployee() {
-        testClass.terminateEmployee(2);
-        assertEquals((float) (1 + partners.length - 2)/10, testClass.occupancyRate());
-    }
-
-    @Test
-    void getBuildDate() {
-        System.out.println(testClass.getBuildDate());
-        assertNotNull(testClass.getBuildDate());
+        testCompany.terminateEmployee("test");
+        Assertions.assertEquals(2/50F, testCompany.occupancyRate());
     }
 
     @Test
     void isCompanyActive() {
-        assertTrue(testClass.isCompanyActive());
-    }
+        Assertions.assertTrue(testCompany.isCompanyActive());
 
-    @Test
-    void getOwner() {
-        assertEquals(owner, testClass.getOwner());
-    }
-
-    @Test
-    void getPartners() {
-        assertArrayEquals(partners, testClass.getPartners());
+        testCompany.inactivateCompany();
+        Assertions.assertFalse(testCompany.isCompanyActive());
     }
 }

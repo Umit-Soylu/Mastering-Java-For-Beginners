@@ -1,30 +1,26 @@
 package com.compiled_with_no_errors.tutorials.oop.abstraction;
 
 /**
- * This interface defines company behaviours
+ * Describes the capabilities of a company
  */
 public interface Company {
-    // This is the type of private entity.
-    String type = "Company";
+    String TYPE = "Company";
 
     /**
-     * This method provides profit of the company for the last year.
-     * @return profit is US Dollars
+     *
+     * @return This years profit
      */
     float yearlyProfit();
 
     /**
-     * This method provides current occupancy rate for the company itself
-     * @return the ratio of current occupants vs. the required occupants.
+     *
+     * @return Ratio of the occupancy
      */
     float occupancyRate();
 
     /**
-     * This method provides information about current active or bankruptcy status of company.
-     * @return {@code true} if active, {@code false} otherwise
+     *
+     * @return {@link true} if copmany is active, {@code false} otherwise
      */
-    default boolean isCompanyActive(){
-        return true;
-    }
-
+    boolean isCompanyActive();
 }
