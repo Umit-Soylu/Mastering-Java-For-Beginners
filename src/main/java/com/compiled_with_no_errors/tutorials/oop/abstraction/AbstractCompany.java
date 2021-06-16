@@ -31,7 +31,7 @@ public abstract class AbstractCompany implements Company{
         numberOfCurrentEmployees = 1;
         expenses = 0f;
         incomes = 0f;
-        activateCompany();
+        isActive = true;
     }
 
     /**
