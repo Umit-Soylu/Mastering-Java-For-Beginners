@@ -1,11 +1,18 @@
 package com.compiled_with_no_errors.tutorials.objects;
 
+import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNull;
 
 class FactoryTest {
+    private int initialCarCount;
+
+    @BeforeEach
+    void setUp() {
+        initialCarCount = Factory.getNumberOfCarsBuilt();
+    }
 
     @Test
     void buildCars() {
@@ -14,7 +21,7 @@ class FactoryTest {
         for (Car c : result) {
             System.out.println(c);
         }
-        assertEquals(5, result.length);
+        assertEquals(5 + initialCarCount, result.length);
     }
 
     @Test
@@ -28,13 +35,13 @@ class FactoryTest {
         int x= 5, y = -1, z = 3;
 
         Factory.buildCars(x);
-        assertEquals(x, Factory.getNumberOfCarsBuilt());
+        assertEquals(x + initialCarCount, Factory.getNumberOfCarsBuilt());
 
         assertNull(Factory.buildCars(y));
-        assertEquals(x, Factory.getNumberOfCarsBuilt());
+        assertEquals(x + initialCarCount, Factory.getNumberOfCarsBuilt());
 
         Factory.buildCars(z);
-        assertEquals(x+z, Factory.getNumberOfCarsBuilt());
+        assertEquals(x+z + initialCarCount, Factory.getNumberOfCarsBuilt());
     }
 
     /*
