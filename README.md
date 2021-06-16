@@ -73,7 +73,11 @@ Following items are covered in their respected links. Please use the link provid
       * Issues tackled: `public`, `protected`, `private` constructors, and `final` variables.
 
 ### Object-Oriented Programming
-* The object-oriented programming capabilities of Java is covered in this section.
+* This section covers the object-oriented programming capabilities of Java.
+  * Abstraction concept details introduced: `abstract`, `interface`, `default` 
+  * Inheritance concept details introduced: `extend`, `instanceof`, `super`, `this` 
+  * Polymorphism concept details introduced: `@Override` 
+  * Encapsulation concept investigated in detail. 
    
 #### Object vs. Class
 * This section covers the definition of class, object and its implementations.
