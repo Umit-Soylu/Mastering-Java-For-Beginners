@@ -10,7 +10,7 @@ class LimitedCompanyTest {
     @BeforeEach
     void setUp() {
         testCompany = new LimitedCompany("Mastering Java", "Compiled with No Errors", 5);
-        Assertions.assertEquals(1/50f, testCompany.occupancyRate());
+        Assertions.assertEquals(1/50F, testCompany.occupancyRate());
     }
 
 
