@@ -69,9 +69,27 @@ Following items are covered in their respected links. Please use the link provid
     
 ### Constructors
 * This section covers default constructors, how to define custom constructors, and use cases.
-  * Source code can be found in [here](https://github.com/Umit-Soylu/Mastering-Java-For-Beginners/tree/Constructors/src/main/java/com/compiled_with_no_errors/tutorials/constructors).
-      * Issues tackled: `public`, `protected`, `private` constructors, and `final` variables.
+  * Source code can be found in [here](https://github.com/Umit-Soylu/Mastering-Java-For-Beginners/tree/Constructors).
+  * Issues tackled: `public`, `protected`, `private` constructors, and `final` variables.
 
+### Object vs. Class
+* This section covers the definition of class, object and its implementations.
+  * Source code can be found in [here](https://github.com/Umit-Soylu/Mastering-Java-For-Beginners/tree/Objects).
+  * Issues tackled: `static`.
+  
+### Specialized Java Classes
+* This section describes special Java Classes, mainly [Enumerations](#enumerations) and [Records](#records). These special classes generates their respective boilerplate code automatically. 
+  
+#### Enumerations
+* This section covers enumerations in java, basically a specialized list of objects.
+  * Source code can be found in [here](https://github.com/Umit-Soylu/Mastering-Java-For-Beginners/tree/Enum).
+  * Issues tackled: `enum`.
+
+#### Records
+* This section covers Records introduced in Java 16, basically a class with immutable fields.
+  * Source code can be found in [here](https://github.com/Umit-Soylu/Mastering-Java-For-Beginners/tree/Records).
+  * Issues tackled: `record`.
+  
 ### Object-Oriented Programming
 * This section covers the object-oriented programming capabilities of Java.
   * Abstraction concept details introduced: `abstract`, `interface`, `default` 
@@ -79,16 +97,6 @@ Following items are covered in their respected links. Please use the link provid
   * Polymorphism concept details introduced: `@Override` 
   * Encapsulation concept investigated in detail. 
    
-#### Object vs. Class
-* This section covers the definition of class, object and its implementations.
-    * Source code can be found in [here](https://github.com/Umit-Soylu/Mastering-Java-For-Beginners/tree/Objects).
-    * Issues tackled: `static`.
-
-#### Enumerations
-* This section covers enumerations in java, basically a specialized list of objects.
-    * Source code can be found in [here](https://github.com/Umit-Soylu/Mastering-Java-For-Beginners/tree/Enum).
-    * Issues tackled: `enum`.
-
 ## Examples Summary
 * There are multiple coding examples included in this repository. The main package for examples can be found in [here](https://github.com/Umit-Soylu/Mastering-Java-For-Beginners/tree/Examples)
 
