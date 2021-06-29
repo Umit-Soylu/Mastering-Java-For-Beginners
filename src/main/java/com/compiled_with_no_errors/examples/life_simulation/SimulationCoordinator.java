@@ -1,4 +1,6 @@
-package com.compiled_with_no_errors.examples.simulation;
+package com.compiled_with_no_errors.examples.life_simulation;
+
+import com.compiled_with_no_errors.examples.life_simulation.simulation.Simulation;
 
 import java.util.Scanner;
 
@@ -20,8 +22,9 @@ public class SimulationCoordinator {
 
         System.out.println("\nPlease provide the ratio of vegetation:");
         float vegetationRatio = inputs.nextFloat();
+        System.out.println("\n\n");
 
-        System.out.println("\nStarting simulation for "+ turn + " turns with vegetation ratio of " + vegetationRatio + " and with " + numberOfCreatures + " creatures.");
+        Simulation simulation = new Simulation(turn, vegetationRatio, numberOfCreatures);
     }
 
 }
