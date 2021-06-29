@@ -1,59 +1,40 @@
 package com.compiled_with_no_errors.tutorials.oop.abstraction;
 
-import java.util.Objects;
-
 /**
- * A generic company class
+ * This is a generic Company
  */
 public abstract class AbstractCompany implements Company{
-    private final String owner, name;
-    private final int numberOfEmployeesRequired;
-
-    private int numberOfCurrentEmployees;
     private boolean isActive;
-    private float expenses, incomes;
+    private final int requiredEmployeesCount;
+    private int currentEmployeesCount;
+    private float incomes, expenses;
 
     /**
-     * Create a company
-     * @param owner Owner of the company
-     * @param name Name of the company
-     * @param numberOfEmployeesRequired The number required to run this company
+     * Initialize a generic company
+     * @param requiredEmployeesCount Number of required employees to run this company.
      */
-    public AbstractCompany(String owner, String name, int numberOfEmployeesRequired) {
-        Objects.requireNonNull(owner);
-        this.owner = owner;
-
-        Objects.requireNonNull(name);
-        this.name = name;
-
-        this.numberOfEmployeesRequired = numberOfEmployeesRequired > 0 ? numberOfEmployeesRequired : 1;
-
-        numberOfCurrentEmployees = 1;
-        expenses = 0f;
-        incomes = 0f;
+    public AbstractCompany(int requiredEmployeesCount) {
+        this.requiredEmployeesCount = requiredEmployeesCount;
+        currentEmployeesCount = 1; // Owner of the company
+        incomes = 0F;
+        expenses = 0F;
         isActive = true;
     }
 
     /**
-     * Add an expense for this year
-     * @param expense New expense
+     * Initialize a generic company with multiple owners
+     * @param requiredEmployeesCount Number of required employees to run this company.
      */
-    protected void addExpense(float expense){
-        if(expense > 0)
-            this.expenses += expense;
+    public AbstractCompany(int requiredEmployeesCount, int currentEmployeesCount) {
+        this.requiredEmployeesCount = requiredEmployeesCount;
+        this.currentEmployeesCount = currentEmployeesCount; // Owners of the company
+        incomes = 0F;
+        expenses = 0F;
+        isActive = true;
     }
 
     /**
-     * Add an income for this year
-     * @param income new income
-     */
-    protected void addIncome(float income){
-        if (income > 0)
-            this.incomes += income;
-    }
-
-    /**
-     * @return This years profit
+     * @return current year's profit
      */
     @Override
     public float yearlyProfit() {
@@ -61,65 +42,85 @@ public abstract class AbstractCompany implements Company{
     }
 
     /**
+     * Initialize the new period budget
+     */
+    protected void initializeNewBudget(){
+        incomes = 0F;
+        expenses = 0F;
+    }
+
+    /**
+     *
+     * @param income A new income to add current period
+     */
+    protected void addIncome(float income){
+        if (isInputPositive(income))
+            incomes += income;
+    }
+    /**
+     *
+     * @param expense A new income to add current period
+     */
+    protected void addExpense(float expense){
+        if (isInputPositive(expense))
+            expenses += expense;
+    }
+
+    /**
+     * @return The ratio of people employed vs the number of people needed
+     */
+    @Override
+    public float occupancyRatio() {
+        return (float) currentEmployeesCount / requiredEmployeesCount;
+    }
+
+    /**
      * Hires a new employee
-     * @param name Name of the employee
+     * @param name Name of the new employee
      */
     protected void hireEmployee(String name){
-        Objects.requireNonNull(name);
-        numberOfCurrentEmployees++;
+        currentEmployeesCount++;
     }
 
     /**
-     * Finalize the relation with the employee
-     * @param name Name of the employee in question
+     * Terminates the contract of the employee
+     * @param name Name of the current employee
      */
     protected void terminateEmployee(String name){
-        if (checkEmployeeExist(name))
-            numberOfCurrentEmployees--;
+        if(isEmployeeExist(name))
+            currentEmployeesCount--; // Also removes the employee from the company
     }
 
     /**
-     * Checks given employee exist or not
-     * @param name Name of the employee
+     * Check whether or not given employee employed by the Company
+     * @param name Name of the employee to check
      * @return true if employee exist, false otherwise
      */
-    protected abstract boolean checkEmployeeExist(String name);
+    protected abstract boolean isEmployeeExist(String name);
 
     /**
-     * @return Ratio of the occupancy
+     * @return true if the company is active, false otherwise
      */
     @Override
-    public float occupancyRate() {
-        return (float) numberOfCurrentEmployees / numberOfEmployeesRequired;
-    }
-
-    /**
-     * @return true if company is active, false otherwise
-     */
-    @Override
-    public boolean isCompanyActive() {
+    public boolean isActive() {
         return isActive;
     }
 
     /**
-     * Deactivates the company
+     * This will change current company status to open
      */
-    protected void inactivateCompany(){
-        isActive = false;
-    }
-
-    /**
-     * Activate the company
-     */
-    protected void activateCompany(){
+    protected void openCompany(){
         isActive = true;
     }
 
-    public String getOwner() {
-        return owner;
+    /**
+     * This will change current company status to close
+     */
+    protected void closeCompany(){
+        isActive = false;
     }
 
-    public String getName() {
-        return name;
+    private boolean isInputPositive(float input){
+        return input >= 0;
     }
 }

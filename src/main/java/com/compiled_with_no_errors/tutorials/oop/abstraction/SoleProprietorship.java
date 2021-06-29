@@ -1,30 +1,33 @@
 package com.compiled_with_no_errors.tutorials.oop.abstraction;
 
-import java.util.Objects;
-
 /**
- * A small sized company
+ * A small sized company owned by an individual
  */
 public class SoleProprietorship extends AbstractCompany{
+    private final String owner;
 
     /**
+     * Initialize a generic company
      *
-     * @param owner Owner of the company
-     * @param name Name of the company. Default to owner
-     * @param numberOfEmployeesRequired Number of employees required to run, should be less than 50
+     * @param numberOfRequiredEmployees Number of required employees to run this company.
      */
-    public SoleProprietorship(String owner, String name, int numberOfEmployeesRequired) {
-        super(owner, Objects.requireNonNullElse(name, owner), Math.min(numberOfEmployeesRequired, 50));
+    public SoleProprietorship(int numberOfRequiredEmployees, String owner) {
+        super(numberOfRequiredEmployees);
+        this.owner = owner;
+    }
+
+    public String getOwner() {
+        return owner;
     }
 
     /**
-     * Checks given employee exist or not
+     * Check whether or not given employee employed by the Company
      *
-     * @param name Name of the employee
+     * @param name Name of the employee to check
      * @return true if employee exist, false otherwise
      */
     @Override
-    protected boolean checkEmployeeExist(String name) {
-        return true;
+    protected boolean isEmployeeExist(String name) {
+        return true; // Placeholder implementation
     }
 }
