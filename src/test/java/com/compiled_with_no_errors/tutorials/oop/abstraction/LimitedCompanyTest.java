@@ -1,48 +1,58 @@
 package com.compiled_with_no_errors.tutorials.oop.abstraction;
 
-import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
+import static org.junit.jupiter.api.Assertions.*;
+
 class LimitedCompanyTest {
-    private LimitedCompany testCompany;
+    private LimitedCompany testClass;
 
     @BeforeEach
     void setUp() {
-        testCompany = new LimitedCompany("Mastering Java", "Compiled with No Errors", 5);
-        Assertions.assertEquals(1/50F, testCompany.occupancyRate());
-    }
+        String[] owners = new String[]{"Compiled", "with", "no", "errors"};
+        testClass = new LimitedCompany(5000, owners);
 
+        assertArrayEquals(owners, testClass.getOwners());
+    }
 
     @Test
     void yearlyProfit() {
-        testCompany.addIncome(1000F);
-        Assertions.assertEquals(1000F, testCompany.yearlyProfit());
+        testClass.addIncome(1000F);
+        assertEquals(1000F, testClass.yearlyProfit());
 
-        testCompany.addIncome(500F);
-        Assertions.assertEquals(1500F, testCompany.yearlyProfit());
+        testClass.addExpense(500F);
+        assertEquals(500F, testClass.yearlyProfit());
 
-        testCompany.addExpense(800F);
-        Assertions.assertEquals(700F, testCompany.yearlyProfit());
+        testClass.addExpense(1500F);
+        assertEquals(-1000F, testClass.yearlyProfit());
+
+        testClass.addIncome(10000F);
+        assertEquals(9000F, testClass.yearlyProfit());
+
+        testClass.initializeNewBudget();
+        assertEquals(0F, testClass.yearlyProfit());
     }
 
     @Test
-    void occupancyRate() {
-        testCompany.hireEmployee("Person-1");
-        Assertions.assertEquals(2/50F, testCompany.occupancyRate());
+    void occupancyRatio() {
+        assertEquals(4F/5000F, testClass.occupancyRatio());
 
-        testCompany.hireEmployee("Person-2");
-        Assertions.assertEquals(3/50F, testCompany.occupancyRate());
+        testClass.hireEmployee("Compiled with no errors");
+        assertEquals(5/5000F, testClass.occupancyRatio());
 
-        testCompany.terminateEmployee("test");
-        Assertions.assertEquals(2/50F, testCompany.occupancyRate());
+        testClass.terminateEmployee("Compiled with no errors");
+        assertEquals(4/5000F, testClass.occupancyRatio());
     }
 
     @Test
-    void isCompanyActive() {
-        Assertions.assertTrue(testCompany.isCompanyActive());
+    void isActive() {
+        assertTrue(testClass.isActive());
 
-        testCompany.inactivateCompany();
-        Assertions.assertFalse(testCompany.isCompanyActive());
+        testClass.closeCompany();
+        assertFalse(testClass.isActive());
+
+        testClass.openCompany();
+        assertTrue(testClass.isActive());
     }
 }

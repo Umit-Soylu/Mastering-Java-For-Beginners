@@ -1,26 +1,26 @@
 package com.compiled_with_no_errors.tutorials.oop.abstraction;
 
 /**
- * Describes the capabilities of a company
+ * Defines the capabilities of a company
  */
 public interface Company {
-    String TYPE = "Company";
+    String TYPE = "COMPANY";
 
     /**
      *
-     * @return This years profit
+     * @return current year's profit
      */
     float yearlyProfit();
 
     /**
      *
-     * @return Ratio of the occupancy
+     * @return The ratio of people employed vs the number of people needed
      */
-    float occupancyRate();
+    float occupancyRatio();
 
     /**
      *
-     * @return {@link true} if copmany is active, {@code false} otherwise
+     * @return true if the company is active, false otherwise
      */
-    boolean isCompanyActive();
+    boolean isActive();
 }

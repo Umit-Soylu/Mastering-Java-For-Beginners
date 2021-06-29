@@ -1,30 +1,29 @@
 package com.compiled_with_no_errors.tutorials.oop.abstraction;
 
 /**
- * A limited company class
+ * Large scale company owned by multiple owners
  */
 public class LimitedCompany extends AbstractCompany{
-    /**
-     * Create a company
-     *
-     * @param owner                     Owner of the company
-     * @param name                      Name of the company
-     * @param numberOfEmployeesRequired The number required to run this company
-     * @implNote number of Employees Required should be at least 50
-     */
-    public LimitedCompany(String owner, String name, int numberOfEmployeesRequired) {
-        super(owner, name, Math.max(numberOfEmployeesRequired, 50));
+    private final String[] owners;
 
+
+    public LimitedCompany(int numberOfRequiredEmployees, String[] owners) {
+        super(numberOfRequiredEmployees, owners.length);
+        this.owners = owners;
+    }
+
+    public String[] getOwners() {
+        return owners;
     }
 
     /**
-     * Checks given employee exist or not
+     * Check whether or not given employee employed by the Company
      *
-     * @param name Name of the employee
+     * @param name Name of the employee to check
      * @return true if employee exist, false otherwise
      */
     @Override
-    protected boolean checkEmployeeExist(String name) {
-        return true;
+    protected boolean isEmployeeExist(String name) {
+        return true; // Placeholder implementation
     }
 }
