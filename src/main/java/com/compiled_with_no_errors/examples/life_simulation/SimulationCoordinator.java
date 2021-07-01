@@ -14,17 +14,23 @@ public class SimulationCoordinator {
 
         System.out.println("\n\n---This is the beginning of the simulation---\n\n");
 
-        System.out.println("\nPlease provide the number of turns the simulation will run:");
+        System.out.print("\nPlease provide the number of turns the simulation will run: ");
         int turn = inputs.nextInt();
 
-        System.out.println("\nPlease provide the number of creatures:");
+        System.out.print("\nPlease provide the number of creatures: ");
         short numberOfCreatures = inputs.nextShort();
 
-        System.out.println("\nPlease provide the ratio of vegetation:");
+        System.out.print("\nPlease provide the ratio of vegetation: ");
         float vegetationRatio = inputs.nextFloat();
-        System.out.println("\n\n");
 
-        Simulation simulation = new Simulation(turn, vegetationRatio, numberOfCreatures);
+        System.out.print("\nPlease provide the width of the simulation: ");
+        int width = inputs.nextInt();
+
+        System.out.print("\nPlease provide the height of the simulation: ");
+        int height = inputs.nextInt();
+
+        System.out.print("\n\n");
+        Simulation simulation = new Simulation(turn, vegetationRatio, numberOfCreatures, width, height);
     }
 
 }
