@@ -1,26 +1,26 @@
-package com.compiled_with_no_errors.examples.life_simulation.utils;
+package com.compiled_with_no_errors.examples.simulation.utils;
 
 import java.util.Random;
 
+/**
+ * Provides utility methods for mathematical operations
+ */
 public class MathSupport {
 
     /**
-     * Generates a random integer value
-     * @param lowerBound Lower value inclusive
-     * @param upperBound Upper value inclusive
-     * @return An integer
+     * Prevents creation of this class
      */
-    public static int generateRandomNumber(int lowerBound, int upperBound){
-        return (lowerBound == upperBound) ? lowerBound : lowerBound + new Random().nextInt(upperBound - lowerBound + 1);
-    }
+    private MathSupport(){}
 
     /**
-     * Generates a random integer value staring from 0
-     * @param upperBound Upper value inclusive
-     * @return An integer
+     * Generate a random integer based on requirements
+     * @param min Minimum index of integer inclusive
+     * @param max Maximum index of integer inclusive
+     * @return a random integer
      */
-    public static int generateRandomNumber(int upperBound){
-        return upperBound == 0 ? 0 : new Random().nextInt(upperBound + 1);
+    public static int generateRandomInteger(int min, int max){
+        int realMin = Math.min(min, max);
+        int realMax = Math.max(min, max);
+        return realMin + new Random().nextInt(realMax - realMin + 1);
     }
-
 }
