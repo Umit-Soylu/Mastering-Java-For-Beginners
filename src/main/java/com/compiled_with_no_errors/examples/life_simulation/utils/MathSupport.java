@@ -1,4 +1,4 @@
-package com.compiled_with_no_errors.examples.simulation.utils;
+package com.compiled_with_no_errors.examples.life_simulation.utils;
 
 import java.util.Random;
 
