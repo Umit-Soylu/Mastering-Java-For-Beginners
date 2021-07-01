@@ -6,37 +6,54 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
 class MathSupportTest {
-   @Nested
-    class randomNumbers {
-        private static int lowerCount, upperCount;
+    private static int min, max;
 
-        @BeforeAll
-        static void setUp() {
-            lowerCount = 0;
-            upperCount = 0;
-        }
+    @BeforeAll
+    static void beforeAll() {
+        min = -5;
+        max = 54;
+    }
+
+
+    @Test
+    void generateRandomWithWrongInputs(){
+        int x = MathSupport.generateRandomInteger(max, min);
+        assertTrue(x >= min && x <= max);
+    }
+
+    @RepeatedTest(100)
+    void generateRandomWithSameBoundary(){
+        int x = MathSupport.generateRandomInteger(15, 15);
+        assertEquals(15, x);
+    }
+
+    @RepeatedTest(100)
+    void generateRandomWithSameBoundary2(){
+        int x = MathSupport.generateRandomInteger(-15, -15);
+        assertEquals(-15, x);
+    }
+
+    @Nested
+    class randomNumbers {
+        private static int minCount, maxCount;
 
         @AfterAll
-        static void tearDown() {
-            assertTrue(lowerCount > 0);
-            assertTrue(upperCount > 0);
+        static void afterAll() {
+            assertTrue(minCount > 0);
+            assertTrue(maxCount > 0);
+            System.out.println("Min count is " + minCount + ", and max count is " + maxCount);
         }
 
         @RepeatedTest(10_000)
-        void generateRandomNumber() {
-            int lower = -45, upper = 65;
-            int x = MathSupport.generateRandomNumber(lower, upper);
-            if (x == lower)
-                lowerCount++;
-            else if (x == upper)
-                upperCount++;
-            assertTrue(x >= lower && x <= upper, "The value generated is " + x);
-        }
-    }
+        void generateRandomInteger() {
+            int x = MathSupport.generateRandomInteger(min, max);
 
-    @Test
-    void testGenerateRandomNumberWithSameBoundaries() {
-        assertEquals(15, MathSupport.generateRandomNumber(15, 15));
-        assertEquals(0, MathSupport.generateRandomNumber(0));
+            if (x == min)
+                minCount++;
+            else if (x == max)
+                maxCount++;
+
+            assertTrue(x >= min && x <= max);
+        }
     }
 }
