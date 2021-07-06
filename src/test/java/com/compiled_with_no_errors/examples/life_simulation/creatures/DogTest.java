@@ -14,6 +14,8 @@ class DogTest {
     static void beforeAll() {
         width = 15;
         height = 10;
+        ID = Integer.parseInt(new Dog(0, 0, 0, 0, Dog.DEFAULT_DNA).getName().substring(4));
+        ID++;
     }
 
     @Nested
