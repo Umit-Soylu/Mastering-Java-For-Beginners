@@ -7,7 +7,8 @@ import com.compiled_with_no_errors.examples.life_simulation.utils.MathSupport;
  */
 abstract class AbstractCreature implements Creature{
     private final String ID;
-    private final int width, height; // These are borders of the simulation
+    private final int width, height, lowerWalkDistance, higherWalkDistance; // These are borders of the simulation
+    private final DNA dna;
     private int[] location;
     private int calorie;
 
@@ -17,12 +18,16 @@ abstract class AbstractCreature implements Creature{
      * @param x Latitude in the world
      * @param y Longitude in the world
      */
-    protected AbstractCreature(String ID, int x, int y, int width, int height) {
+    protected AbstractCreature(String ID, int x, int y, int width, int height, DNA dna) {
         this.ID = ID;
         location = new int[]{x, y};
-        this.calorie = 500;
         this.width = width;
         this.height = height;
+        this.dna = dna;
+        this.calorie = dna.birthCalorie(); //TODO: Calorie may go negative, no check for that!!!
+
+        lowerWalkDistance = -1 * Math.floorDiv(dna.walkDistance(), 2);
+        higherWalkDistance = (int) Math.ceil((float) dna.walkDistance() / 2);
     }
 
     public String getName() {
@@ -34,8 +39,10 @@ abstract class AbstractCreature implements Creature{
      */
     @Override
     public void move() {
-        location[0] = Math.floorMod(location[0] + MathSupport.generateRandomInteger(-5, 5), width);
-        location[1] = Math.floorMod(location[1] + MathSupport.generateRandomInteger(-5, 5), height);
+        calorie -= dna.movementCalorie();
+
+        location[0] = Math.floorMod(location[0] + MathSupport.generateRandomInteger(lowerWalkDistance, higherWalkDistance), width);
+        location[1] = Math.floorMod(location[1] + MathSupport.generateRandomInteger(lowerWalkDistance, higherWalkDistance), height);
     }
 
     public int[] getCurrentLocation() {
@@ -47,6 +54,7 @@ abstract class AbstractCreature implements Creature{
      */
     @Override
     public void copulate() {
+        calorie -= dna.copulateCalorie();
         // TODO Will handle in next phases
     }
 

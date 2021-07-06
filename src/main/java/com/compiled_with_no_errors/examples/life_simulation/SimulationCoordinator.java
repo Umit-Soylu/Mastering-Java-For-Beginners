@@ -31,6 +31,7 @@ public class SimulationCoordinator {
         System.out.println("\n");
 
         Simulation lifeSimulation = new Simulation(turn, numberOfCreatures, vegetationRatio, width, height);
+        lifeSimulation.simulate();
     }
 
 }
