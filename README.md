@@ -121,7 +121,7 @@ ID   | Definition | Solution
 2 | Basic Mathematical operator executor for `String` input | [here](https://github.com/Umit-Soylu/Mastering-Java-For-Beginners/blob/master/src/main/java/com/compiled_with_no_errors/exercises/string_parsers/MathematicalOperations.java)
 3 | Execution of project phases via `enum` | [here](https://github.com/Umit-Soylu/Mastering-Java-For-Beginners/tree/master/src/main/java/com/compiled_with_no_errors/exercises/project_phases/ProjectPhases.java) 
 4 | Prime Factorization of a number with `exceptions`| [here](https://github.com/Umit-Soylu/Mastering-Java-For-Beginners/blob/master/src/main/java/com/compiled_with_no_errors/exercises/prime_factors/PrimeFactorization.java) 
-3 | Finding shared Primes of numbers comma seperated in a String using `String` libraries | [here](https://github.com/Umit-Soylu/Mastering-Java-For-Beginners/blob/master/src/main/java/com/compiled_with_no_errors/exercises/prime_factors/SharedPrimes.java) 
+5 | Finding shared Primes of numbers comma seperated in a String using `String` libraries | [here](https://github.com/Umit-Soylu/Mastering-Java-For-Beginners/blob/master/src/main/java/com/compiled_with_no_errors/exercises/prime_factors/SharedPrimes.java) 
 ----------
 [![CodeQuality](https://www.code-inspector.com/project/17653/score/svg)](https://frontend.code-inspector.com/public/project/17653/Mastering-Java-For-Beginners/dashboard)
 [![CodeGrade](https://www.code-inspector.com/project/17653/status/svg)](https://frontend.code-inspector.com/public/project/17653/Mastering-Java-For-Beginners/dashboard)
