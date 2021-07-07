@@ -96,7 +96,12 @@ Following items are covered in their respected links. Please use the link provid
   * Inheritance concept details introduced: `extend`, `instanceof`, `super`, `this` 
   * Polymorphism concept details introduced: `@Override` 
   * Encapsulation concept investigated in detail. 
-   
+
+### Exceptions
+* This section covers throwing and handling exceptions in Java
+  * Source code can be found in [here](https://github.com/Umit-Soylu/Mastering-Java-For-Beginners/tree/Exceptions).
+  * Issues tackled: `try ... catch`, `throws`, `finally`
+  
 ## Examples Summary
 * There are multiple coding examples included in this repository. The main package for examples can be found in [here](https://github.com/Umit-Soylu/Mastering-Java-For-Beginners/tree/Examples)
 
