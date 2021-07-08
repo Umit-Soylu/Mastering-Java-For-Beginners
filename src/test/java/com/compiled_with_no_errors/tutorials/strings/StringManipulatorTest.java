@@ -41,6 +41,7 @@ class StringManipulatorTest {
         void setUp() {
             currentCapacity = StringManipulator.getCapacity();
             System.out.println("Before test, currentCapacity = " + currentCapacity);
+            assertTrue(StringManipulator.getCapacity() >= currentCapacity);
         }
 
         @AfterEach
@@ -52,7 +53,7 @@ class StringManipulatorTest {
         @ParameterizedTest
         @ValueSource(strings = {"Mastering", "Java", "For", "Beginners"})
         void addStrings(String s) {
-            StringManipulator.addStrings(s);
+            assertDoesNotThrow(() -> StringManipulator.addStrings(s));
         }
     }
 }
