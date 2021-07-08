@@ -13,7 +13,7 @@ public class ConstraintValidator {
         if (x > 0){
             return true;
         } else
-            throw new IllegalArgumentException("Given input should be bigger than 0 but was " + x);
+            throw new IllegalArgumentException(String.format("Given input should be bigger than 0 but was %d", x));
     }
 
     /**
@@ -25,6 +25,6 @@ public class ConstraintValidator {
         if (number >= 0 && number <= 1)
             return true;
         else
-            throw new IllegalArgumentException("Given input should be in between 0 and 1, but was " + number);
+            throw new IllegalArgumentException(String.format("Given input should be in between 0 and 1, but was %.2f", number)); //  25.54896
     }
 }

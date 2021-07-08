@@ -19,7 +19,7 @@ public class SimulationCoordinator {
         } catch (IllegalArgumentException e){
             Scanner inputs = new Scanner(System.in);
             System.out.println("Simulation is not properly defined.");
-            System.out.print("Do you want to provide inputs again (Type 'Yes'), or exit (Type 'No'):");
+            System.out.print("Do you want to provide inputs again (Type '(Y)es'), or exit (Type '(N)o'):");
             String answer = inputs.next();
             switch (answer) {
                 case "Yes", "yes", "Y", "y" -> coordinateSimulation();

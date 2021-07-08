@@ -7,6 +7,7 @@ public class Simulation {
     private final Settings settings;
     private final CreatureFactory factory;
     private Creature[] creatures;
+
     /**
      * Creates the foundation for the simulation
      * @param nbOfTurns Number of turns the simulation will run
@@ -31,12 +32,15 @@ public class Simulation {
 
         // Loop for nb of turns
         for (int i = 0; i < settings.nbOfTurns(); i++) {
-
+            System.out.printf("Current turn: %d%n", i);
             // Move in each turn
             for (int j = 0; j < creatures.length; j++) {
                 creatures[j].move(); // TODO: Currently creatures only moves
+                System.out.printf("\t%s\n", creatures[j]);
             }
         }
+
+        System.out.printf("Simulation is ended, number of turns configuration is %d.%n", settings.nbOfTurns());
     }
 
 
