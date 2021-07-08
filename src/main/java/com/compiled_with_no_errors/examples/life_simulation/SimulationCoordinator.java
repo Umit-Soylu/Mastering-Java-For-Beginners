@@ -10,6 +10,26 @@ import java.util.Scanner;
 public class SimulationCoordinator {
 
     public static void main(String[] args) {
+        coordinateSimulation();
+    }
+
+    private static void coordinateSimulation(){
+        try{
+            initializeSimulation();
+        } catch (IllegalArgumentException e){
+            Scanner inputs = new Scanner(System.in);
+            System.out.println("Simulation is not properly defined.");
+            System.out.print("Do you want to provide inputs again (Type 'Yes'), or exit (Type 'No'):");
+            String answer = inputs.next();
+            switch (answer) {
+                case "Yes", "yes", "Y", "y" -> coordinateSimulation();
+                case "No", "no", "N", "n" -> System.out.println("Exiting simulation without running");
+                default -> throw new IllegalArgumentException("Improper input '" + answer + "', exiting");
+            }
+        }
+    }
+
+    private static void initializeSimulation(){
         Scanner inputs = new Scanner(System.in);
 
         System.out.println("\n\n---This is the beginning of the simulation---\n\n");
