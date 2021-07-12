@@ -1,59 +1,63 @@
 package com.compiled_with_no_errors.tutorials.strings;
 
-import org.junit.jupiter.api.*;
-import org.junit.jupiter.params.ParameterizedTest;
-import org.junit.jupiter.params.provider.ValueSource;
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;
 
 class StringManipulatorTest {
+    private String one, two, three, four;
 
-    @Test
-    void investigateStringLocation() {
-        String one = "Complied with no errors", two = "Mastering Java for Beginners";
-
-        int locOne = StringManipulator.investigateStringLocation(one),
-                locTwo = StringManipulator.investigateStringLocation(two);
-
-        System.out.println("Location for " + one + " is " + locOne);
-        System.out.println("Location for " + two + " is " + locTwo);
-
-        assertNotEquals(locOne, locTwo);
-
-        int locThree = StringManipulator.investigateStringLocation(new String(one));
-        System.out.println("Location for " + one + " is " + locThree);
-        assertNotEquals(locOne, locThree);
+    @BeforeEach
+    void setUp() {
+        one = "Mastering Java For Beginners";
+        two = "Compiled With No Errors";
+        three = one;
+        four = new String(two);
     }
 
-    @Nested
-    class stringBuilderTest {
-        private int currentCapacity;
+    @Test
+    void nullCheck() {
+        assertThrows(NullPointerException.class, () -> StringManipulator.areStringsEqual(null, ""));
+        assertThrows(NullPointerException.class, () -> StringManipulator.areStringsEqual(null, null));
 
-        @AfterAll
-        static void afterAll() {
-            assertEquals("Mastering Java For Beginners", StringManipulator.returnString());
+        assertThrows(NullPointerException.class, () -> StringManipulator.areContentsEqual(null, null));
+        assertThrows(NullPointerException.class, () -> StringManipulator.areContentsEqual("null", null));
 
-            assertEquals(0, StringManipulator.returnString().length());
-            System.out.println("Last capacity = " + StringManipulator.getCapacity());
-        }
+        assertThrows(NullPointerException.class, () -> StringManipulator.generateString(null, ""));
+        assertThrows(NullPointerException.class, () -> StringManipulator.generateString("", null));
+    }
 
-        @BeforeEach
-        void setUp() {
-            currentCapacity = StringManipulator.getCapacity();
-            System.out.println("Before test, currentCapacity = " + currentCapacity);
-            assertTrue(StringManipulator.getCapacity() >= currentCapacity);
-        }
+    @Test
+    void areStringsEqual() {
+        assertFalse(StringManipulator.areStringsEqual(one, two));
 
-        @AfterEach
-        void tearDown() {
-            System.out.println("After test, length = " + StringManipulator.getLength());
-            assertTrue(StringManipulator.getCapacity() >= currentCapacity);
-        }
+        assertTrue(StringManipulator.areStringsEqual(three, one));
 
-        @ParameterizedTest
-        @ValueSource(strings = {"Mastering", "Java", "For", "Beginners"})
-        void addStrings(String s) {
-            assertDoesNotThrow(() -> StringManipulator.addStrings(s));
-        }
+        assertFalse(StringManipulator.areStringsEqual(four, two));
+    }
+
+    @Test
+    void areContentsIdentical(){
+        assertFalse(StringManipulator.areContentsEqual(one, two));
+        assertTrue(StringManipulator.areContentsEqual(one, three));
+        assertTrue(StringManipulator.areContentsEqual(two, four));
+    }
+
+    @Test
+    void testStringBuilder() {
+        assertEquals("Mastering, Java, For, Beginners", StringManipulator.generateString(", ", "Mastering", "Java", "For", "Beginners"));
+        assertEquals("Mastering Java For Beginners and Compiled with No Errors", StringManipulator.generateString(" ", "Mastering", "Java", "For", "Beginners", "and", "Compiled", "with", "No", "Errors"));
+    }
+
+    @Test
+    void displayGenericTest() {
+        assertDoesNotThrow(() -> StringManipulator.displayGenericString("Mastering Java For Beginners", new char[]{'J', 'A', 'V', 'A'}));
+    }
+
+    @Test
+    void displayNumericTest() {
+        assertDoesNotThrow(() -> StringManipulator.displayNumbers(-1904, Float.NEGATIVE_INFINITY));
+        assertDoesNotThrow(() -> StringManipulator.displayNumbers(15_508, 25.56E-41F));
     }
 }
