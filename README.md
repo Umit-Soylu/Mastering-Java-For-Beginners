@@ -102,7 +102,7 @@ Following items are covered in their respected links. Please use the link provid
   * Source code can be found in [here](https://github.com/Umit-Soylu/Mastering-Java-For-Beginners/tree/Exceptions).
   * Issues tackled: `try ... catch`, `throws`, `finally`
 
-### Exceptions
+### Strings
 * This section covers Strings. formatting and Building Strings.
   * Source code can be found in [here](https://github.com/Umit-Soylu/Mastering-Java-For-Beginners/tree/Strings).
   * Issues tackled: `StringBuilder`, `StringBuffer`, `String.format`, `System.out.printf`
