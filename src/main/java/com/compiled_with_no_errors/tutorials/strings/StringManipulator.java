@@ -51,14 +51,33 @@ public class StringManipulator {
         StringBuilder builder = new StringBuilder();
 
         for (String input : inputs) {
-            System.out.printf("Current capacity is %s, and current length is %s.\n", builder.capacity(), builder.length());
+//            System.out.printf("Current capacity is %s, and current length is %s.\n", builder.capacity(), builder.length());
             builder.append(input).append(delimiter);
         }
 
         int i = builder.lastIndexOf(delimiter);
         builder.delete(i, builder.length());
-        System.out.printf("Last capacity is %s, and last length is %s.\n", builder.capacity(), builder.length());
+//        System.out.printf("Last capacity is %s, and last length is %s.\n", builder.capacity(), builder.length());
         return builder.toString();
+    }
+
+
+    /**
+     *
+     * @param delimiter Delimiter to be put in between strings
+     * @param inputs Inputs
+     * @return A string from inputs using delimiter in between
+     */
+    public static String generateStringsViaAppender(String delimiter, String... inputs){
+        Objects.requireNonNull(delimiter);
+        Objects.requireNonNull(inputs);
+
+        String result = "";
+        for (String input : inputs) {
+            result += input + delimiter;
+        }
+
+        return result.substring(0, result.lastIndexOf(delimiter));
     }
 
     public static void displayGenericString(String s, char[] chars){
