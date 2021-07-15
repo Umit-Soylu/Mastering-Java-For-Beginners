@@ -2,8 +2,6 @@ package com.compiled_with_no_errors.examples.life_simulation.creatures;
 
 import com.compiled_with_no_errors.examples.life_simulation.utils.MathSupport;
 
-import java.util.Arrays;
-
 /**
  * Common capabilities of the creature
  */
@@ -74,10 +72,4 @@ abstract class AbstractCreature implements Creature{
     public int getCurrentCalorie() {
         return calorie;
     }
-
-    @Override
-    public String toString() {
-        return String.format("%s, location%s, calorie:%d", ID, Arrays.toString(location), calorie);
-    }
-
 }

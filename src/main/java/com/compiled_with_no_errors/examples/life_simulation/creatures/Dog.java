@@ -10,7 +10,7 @@ class Dog extends AbstractCreature {
      * @param y Current longitude
      */
     protected Dog(int x, int y, int width, int height, DNA dna) {
-        super(String.format("Dog-%d", COUNTER++), x, y, width, height, dna);
+        super("Dog-" + COUNTER++, x, y, width, height, dna);
     }
 
 }
