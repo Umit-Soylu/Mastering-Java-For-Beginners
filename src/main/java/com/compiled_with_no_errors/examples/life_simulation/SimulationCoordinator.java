@@ -1,6 +1,7 @@
 package com.compiled_with_no_errors.examples.life_simulation;
 
 import com.compiled_with_no_errors.examples.life_simulation.simulation.Simulation;
+import com.compiled_with_no_errors.examples.life_simulation.utils.ImproperInputException;
 
 import java.util.Scanner;
 
@@ -16,7 +17,7 @@ public class SimulationCoordinator {
     private static void coordinateSimulation(){
         try{
             initializeSimulation();
-        } catch (IllegalArgumentException e){
+        } catch (ImproperInputException e){
             Scanner inputs = new Scanner(System.in);
             System.out.println("Simulation is not properly defined.");
             System.out.print("Do you want to provide inputs again (Type 'Yes'), or exit (Type 'No'):");
@@ -24,7 +25,7 @@ public class SimulationCoordinator {
             switch (answer) {
                 case "Yes", "yes", "Y", "y" -> coordinateSimulation();
                 case "No", "no", "N", "n" -> System.out.println("Exiting simulation without running");
-                default -> throw new IllegalArgumentException("Improper input '" + answer + "', exiting");
+                default -> throw new ImproperInputException("Improper input '" + answer + "', exiting");
             }
         }
     }
